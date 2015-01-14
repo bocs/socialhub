@@ -406,31 +406,11 @@ $(document).ready(function () {
 
         data.ch.totalRef = 137744;
 
-        function _formatDateToSql(value) {
-            d = new Date(value);
-            curr_date = d.getDate();
-            curr_date = (curr_date < 10) ? '0' + curr_date : curr_date;
-            curr_month = d.getMonth() + 1;
-            curr_month = (curr_month < 10) ? '0' + curr_month : curr_month;
-            curr_year = d.getFullYear();
-            return curr_year + "-" + curr_month + "-" + curr_date;
-        }
-
-        function _getStartDate() {
-            return _formatDateToSql($("input[name=filterDate]").val().replace(/ /g, ''));
-        }
-
-        function _getEndDate() {
-            return _formatDateToSql($("input[name=filterDateTo]").val().replace(/ /g, ''));
-        }
         currentStartDate = _getStartDate();
         currentEndDate = _getEndDate();
-
         var formattedStartDate = currentStartDate.split("-"),
             formattedEndDate = currentEndDate.split("-");
-
         data.ch.refPeriod = formattedStartDate[1] + "/" + formattedStartDate[2] + "/" + formattedStartDate[0].substr(2) + " - " + formattedEndDate[1] + "/" + formattedEndDate[2] + "/" + formattedEndDate[0].substr(2);
-
         data.socChannels = [
             {
                 category: "Facebook",
@@ -972,6 +952,38 @@ $(document).ready(function () {
                 injectionSvg(e.sender.element[0].id);
             }
 
+        }
+
+        function _formatDateToSql(value) {
+            d = new Date(value);
+            curr_date = d.getDate();
+            curr_date = (curr_date < 10) ? '0' + curr_date : curr_date;
+            curr_month = d.getMonth() + 1;
+            curr_month = (curr_month < 10) ? '0' + curr_month : curr_month;
+            curr_year = d.getFullYear();
+            return curr_year + "-" + curr_month + "-" + curr_date;
+        }
+
+        function _getStartDate() {
+            return _formatDateToSql($("input[name=filterDate]").val());
+        }
+
+        function _getEndDate() {
+            return _formatDateToSql($("input[name=filterDateTo]").val());
+        }
+
+        currentStartDate = _getStartDate();
+        currentEndDate = _getEndDate();
+
+
+        var timeDiff = Math.abs(new Date(currentEndDate).getTime() - new Date(currentStartDate).getTime());
+        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+        var growthAxis;
+        if (diffDays > 14) {
+            growthAxis = "week";
+        }
+        else {
+            growthAxis = "day";
         }
 
         function createNewGrowthChart() {

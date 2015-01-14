@@ -1482,12 +1482,6 @@ section > .row, header > .row {
     margin: -10px auto 0;
 }
 
-.insideDonAr {
-    width: 105px;
-    height: 70px;
-    margin: -256px 0 0 88px;
-    position: relative;
-}
 .insideDonUn {
     font-size: 11px;
 }
