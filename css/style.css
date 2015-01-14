@@ -222,7 +222,7 @@ body {
     height: 25px;
     overflow: hidden;
     display: inline;
-    background: url(../images/select_arr.png) 0 0 no-repeat;
+    background: url(../images/select_arr2.png) 0 0 no-repeat;
 }
 .selectModI {
     font-size: 21px;
@@ -727,7 +727,7 @@ table {
     text-transform: none;
 }
 #competitiveContainer .k-progress-status {
-    top: 25px;
+    top: 23px;
 }
 #competitiveContainer .k-progressbar-horizontal {
     width: 100%;
@@ -740,7 +740,8 @@ table {
     border-radius: 0;
     border: 1px solid #3e3e3d;
     background-color: transparent;
-    background-image: none
+    background-image: none;
+    margin-bottom: 3px;
 }
 #competitiveContainer .k-progress-status-wrap {
     border-radius: 0;
@@ -1098,6 +1099,7 @@ input[type="radio"]:checked + span {
     margin-bottom: 20px;
     padding: 8px;
     text-transform: none;
+    text-align: center;
 }
 .executiveCont ul {
     padding: 12px 0;
@@ -1135,9 +1137,11 @@ input[type="radio"]:checked + span {
 .executiveGreyBack {
     background-color: #479ec2;
     color: #ffffff;
-    font-size: 17px;
+    font-size: 16px;
     display: inline-block;
     padding: 2px 8px 1px;
+    width: 80px;
+    text-align: center;
 }
 .executiveGreyBack i {
     color: #ffffff;
@@ -1145,9 +1149,11 @@ input[type="radio"]:checked + span {
 .executiveWhiteBack {
     background-color: #dcdddf;
     color: #4f4c4a;
-    font-size: 17px;
+    font-size: 16px;
     display: inline-block;
     padding: 2px 8px 1px;
+    width: 80px;
+    text-align: center;
 }
 .executiveWhiteBack i {
     color: #4f4c4a;
@@ -1163,6 +1169,7 @@ input[type="radio"]:checked + span {
 }
 .rightSpaceS {
     margin-right: -2px;
+    width: auto;
 }
 .dispBlock {
     display: block;
@@ -1420,4 +1427,80 @@ section > .row, header > .row {
 .userInfo i {
     margin: 0 6px;
     font-size: 18px;
+}
+
+.goalArr {
+    font-size: 36px;
+    color: #479ec2;
+}
+
+.goalArrContLeft, .goalArrContRight {
+    margin-top: 148px;
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.tableGoals > tbody > tr > td > input {
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 14px;
+}
+.tableGoals > tbody > tr > td > input:focus {
+    background-color: #f7f7f7;
+}
+.tableGoals > tbody > tr > td:last-child {
+    border-left: 1px solid #656565;
+}
+.betweenRowsPar {
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+    height: 12px;
+    position: relative;
+}
+.betweenRows {
+    text-align: center;
+    font-size: 13px;
+    margin-top: -15px;
+    position: absolute;
+    width: 72px;
+    right: -7px;
+}
+
+.executiveCont#top5labels ul {
+    padding: 12px 0;
+    width: 220px;
+    margin: 0 auto;
+}
+
+.donChartCont {
+    width: 500px;
+    margin: -10px auto 0;
+}
+
+.insideDonAr {
+    width: 105px;
+    height: 70px;
+    margin: -256px 0 0 88px;
+    position: relative;
+}
+.insideDonUn {
+    font-size: 11px;
+}
+.chartTitle {
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Trade Gothic Cond';
+    margin-bottom: 6px;
+}
+
+.chartDesc {
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
 }

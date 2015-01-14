@@ -324,6 +324,7 @@ $(document).ready(function () {
         data.ch.engRatePer = data.enagedAvg;
         data.ch.engAverPer = '+25%';
         data.ch.totalGrowth = numberWithCommas(findMax(data.bars, 'value') - findMin(data.bars, 'value'));
+        data.ch.totalGrowth1 = numberWithCommas(findMax(data.bars, 'value') - findMin(data.bars, 'value'));
         data.ch.totalActiv = data.bars.length;
         data.ch.totalEng = numberWithCommas(findSum(data.barsEng, 'likes') + findSum(data.barsEng, 'clicks') + findSum(data.barsEng, 'likes'));
         data.ch.totalGrowthPer = '79%';
@@ -391,6 +392,321 @@ $(document).ready(function () {
         data.ch.postsNumber = numberWithCommas(data.barsEng.length);
         data.ch.avgPostsPerWeek = numberWithCommas(findAvgPostsPerWeek(fbMessages));
         data.ch.postsPerQuarter = numberWithCommas(getPostsPerQuarter(fbMessages));
+
+        data.ch.topLabelsA = 'WEBDESIGN';
+        data.ch.topLabelsB = 'Summit';
+        data.ch.topLabelsC = 'SXSW';
+        data.ch.topLabelsD = 'Spredfast';
+        data.ch.topLabelsE = 'Marketing';
+        data.ch.topLabelsAc = '1,201';
+        data.ch.topLabelsBc = '987';
+        data.ch.topLabelsCc = '981';
+        data.ch.topLabelsDc = '603';
+        data.ch.topLabelsEc = '420';
+
+        data.ch.totalRef = 137744;
+
+        function _formatDateToSql(value) {
+            d = new Date(value);
+            curr_date = d.getDate();
+            curr_date = (curr_date < 10) ? '0' + curr_date : curr_date;
+            curr_month = d.getMonth() + 1;
+            curr_month = (curr_month < 10) ? '0' + curr_month : curr_month;
+            curr_year = d.getFullYear();
+            return curr_year + "-" + curr_month + "-" + curr_date;
+        }
+
+        function _getStartDate() {
+            return _formatDateToSql($("input[name=filterDate]").val().replace(/ /g, ''));
+        }
+
+        function _getEndDate() {
+            return _formatDateToSql($("input[name=filterDateTo]").val().replace(/ /g, ''));
+        }
+        currentStartDate = _getStartDate();
+        currentEndDate = _getEndDate();
+
+        var formattedStartDate = currentStartDate.split("-"),
+            formattedEndDate = currentEndDate.split("-");
+
+        data.ch.refPeriod = formattedStartDate[1] + "/" + formattedStartDate[2] + "/" + formattedStartDate[0].substr(2) + " - " + formattedEndDate[1] + "/" + formattedEndDate[2] + "/" + formattedEndDate[0].substr(2);
+
+        data.socChannels = [
+            {
+                category: "Facebook",
+                color: "#151e2d",
+                value: 127674
+            }, {
+                category: "Twitter",
+                color: "#982b1f",
+                value: 3240
+            }, {
+                category: "Youtube",
+                color: "#b15c27",
+                value: 45
+            }, {
+                category: "Douban",
+                color: "#e4bf22",
+                value: 17
+            }, {
+                category: "Google Plus",
+                color: "#2d6632",
+                value: 4
+            }, {
+                category: "Line",
+                color: "#737881",
+                value: 88
+            }, {
+                category: "Instagram",
+                color: "#c18079",
+                value: 51
+            }, {
+                category: "Pinterest",
+                color: "#d09d7d",
+                value: 1324
+            }, {
+                category: "Wanelo",
+                color: "#efd97a",
+                value: 5293
+            }, {
+                category: "We Heart It",
+                color: "#81a384",
+                value: 8
+            }, {
+                category: "Youku",
+                color: "#d0d2d5",
+                value: 0
+            }
+        ];
+
+        data.barsRefs = [
+            {
+                all_social: 18324,
+                all_visits: 400589,
+                date: "Tue Jan 06 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Tues",
+                douban: 3,
+                facebook: 16812,
+                google_plus: 0,
+                instagram: 9,
+                line: 8,
+                month: "January",
+                pinterest: 187,
+                twitter: 598,
+                wanelo: 698,
+                we_heart_it: 4,
+                week: "1/6",
+                weibo: 2,
+                youku: 0,
+                youtube: 3
+            }, {
+                all_social: 19221,
+                all_visits: 430481,
+                data: "Wed Jan 07 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Wed",
+                douban: 2,
+                facebook: 18029,
+                google_plus: 0,
+                instagram: 12,
+                line: 6,
+                month: "January",
+                pinterest: 142,
+                twitter: 389,
+                wanelo: 633,
+                we_heart_it: 1,
+                week: "1/7",
+                weibo: 2,
+                youku: 0,
+                youtube: 7
+            }, {
+                all_social: 23216,
+                all_visits: 407661,
+                data: "Thu Jan 08 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Thurs",
+                douban: 4,
+                facebook: 21801,
+                google_plus: 2,
+                instagram: 4,
+                line: 20,
+                month: "January",
+                pinterest: 208,
+                twitter: 496,
+                wanelo: 666,
+                we_heart_it: 0,
+                week: "1/8",
+                weibo: 1,
+                youku: 0,
+                youtube: 14
+            }, {
+                all_social: 18485,
+                all_visits: 331910,
+                data: "Fri Jan 09 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Fri",
+                douban: 2,
+                facebook: 17240,
+                google_plus: 0,
+                instagram: 4,
+                line: 23,
+                month: "January",
+                pinterest: 174,
+                twitter: 356,
+                wanelo: 672,
+                we_heart_it: 0,
+                week: "1/9",
+                weibo: 9,
+                youku: 0,
+                youtube: 6
+            }, {
+                all_social: 19699,
+                all_visits: 365248,
+                data: "Sat Jan 10 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Sat",
+                douban: 2,
+                facebook: 18116,
+                google_plus: 0,
+                instagram: 9,
+                line: 14,
+                month: "January",
+                pinterest: 216,
+                twitter: 402,
+                wanelo: 931,
+                we_heart_it: 1,
+                week: "1/10",
+                weibo: 2,
+                youku: 0,
+                youtube: 7
+            }, {
+                all_social: 21106,
+                all_visits: 404291,
+                data: "Sun Jan 11 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Sun",
+                douban: 2,
+                facebook: 19296,
+                google_plus: 1,
+                instagram: 8,
+                line: 10,
+                month: "January",
+                pinterest: 223,
+                twitter: 508,
+                wanelo: 1050,
+                we_heart_it: 1,
+                week: "1/11",
+                weibo: 3,
+                youku: 0,
+                youtube: 5
+            }, {
+                all_social: 17709,
+                all_visits: 324007,
+                data: "Mon Jan 12 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Mon",
+                douban: 2,
+                facebook: 16380,
+                google_plus: 1,
+                instagram: 5,
+                line: 7,
+                month: "January",
+                pinterest: 174,
+                twitter: 491,
+                wanelo: 643,
+                we_heart_it: 1,
+                week: "1/12",
+                weibo: 3,
+                youku: 0,
+                youtube: 3
+            }
+        ];
+
+        var socRefSeries = [{
+            type: "column",
+            field: "facebook",
+            name: "Facebook",
+            stack: true,
+            visible: true,
+            color: "#151e2d"
+        }, {
+            type: "column",
+            field: "twitter",
+            name: "Twitter",
+            stack: true,
+            visible: true,
+            color: "#982b1f"
+        }, {
+            type: "column",
+            field: "youtube",
+            name: "Youtube",
+            stack: true,
+            visible: true,
+            color: "#b15c27"
+        }, {
+            type: "column",
+            field: "douban",
+            name: "Douban",
+            stack: true,
+            visible: true,
+            color: "#e4bf22"
+        }, {
+            type: "column",
+            field: "google_plus",
+            name: "Google Plus",
+            stack: true,
+            visible: true,
+            color: "#2d6632"
+        }, {
+            type: "column",
+            field: "line",
+            name: "Line",
+            stack: true,
+            visible: true,
+            color: "#737881"
+        }, {
+            type: "column",
+            field: "instagram",
+            name: "Instagram",
+            stack: true,
+            visible: true,
+            color: "#c18079"
+        }, {
+            type: "column",
+            field: "pinterest",
+            name: "Pinterest",
+            stack: true,
+            visible: true,
+            color: "#d09d7d"
+        }, {
+            type: "column",
+            field: "wanelo",
+            name: "Wanelo",
+            stack: true,
+            visible: true,
+            color: "#efd97a"
+        }, {
+            type: "column",
+            field: "we_heart_it",
+            name: "We Heart It",
+            stack: true,
+            visible: true,
+            color: "#81a384"
+        }, {
+            type: "column",
+            field: "youku",
+            name: "Youku",
+            stack: true,
+            visible: true,
+            color: "#d0d2d5"
+        }, {
+            type: "line",
+            field: "all_visits",
+            name: "TOTAL SITE TRAFFIC",
+            color: "#81a384",
+            axis: "total"
+        }, {
+            type: "line",
+            field: "all_social",
+            agregate: "sum",
+            name: "SOCIAL REFERRALS",
+            color: "#b8b6bc",
+            axis: "quantity"
+        }];
 
         var changeStatusType = {
             'followersChartS': {'container': 'changeStatusPlus', 'name': 'New Followers'},
@@ -521,13 +837,13 @@ $(document).ready(function () {
         baseActivVal.value(data.baseActivVal);
         engRateVal.value(data.engRateVal);
         engAverVal.value(data.engAverVal);
-//    brandAVal.value(data.brandAVal);
-//    brandBVal.value(data.brandBVal);
-//    brandCVal.value(data.brandCVal);
-//    brandDVal.value(data.brandDVal);
-//    brandEVal.value(data.brandEVal);
-//    brandFVal.value(data.brandFVal);
-//    brandGVal.value(data.brandGVal);
+        brandAVal.value(data.brandAVal);
+        brandBVal.value(data.brandBVal);
+        brandCVal.value(data.brandCVal);
+        brandDVal.value(data.brandDVal);
+        brandEVal.value(data.brandEVal);
+        brandFVal.value(data.brandFVal);
+        brandGVal.value(data.brandGVal);
 
         //Insert change values
         for (var val in data.ch) {
@@ -657,7 +973,6 @@ $(document).ready(function () {
             }
 
         }
-
 
         function createNewGrowthChart() {
             var dataSource = new kendo.data.DataSource({
@@ -1383,6 +1698,104 @@ $(document).ready(function () {
             });
         }
 
+        function createTotRefferalsChart() {
+            $("#totRefferalsChart").height(260).width(470).kendoChart({
+                legend: {
+                    labels: {
+                        template: "#= kendo.format('{0:P}', percentage) # #= dataItem.category # - #= kendo.toString(value, 'n0') # referrals",
+                        font: "14px Trade Gothic Cond"
+                    },
+                    position: "right"
+                },
+                seriesDefaults: {
+                    labels: {
+                        visible: false
+                    },
+                    overlay: {
+                        gradient: "none"
+                    },
+                    holeSize: 62
+                },
+                series: [{
+                    type: "donut",
+                    data: data.socChannels
+                }],
+                chartArea: {
+                    background: ""
+                },
+                tooltip: {
+                    visible: true,
+                    template: "<span class='mid white'>#= category # - #= kendo.toString(value, 'n0') # is #= kendo.format('{0:P}', percentage) #</span>"
+                },
+                legendItemClick: onLegendRefClick
+            });
+        }
+
+        function createSocRefChart() {
+            $("#socRefChart").height(290).kendoChart({
+                dataSource: {
+                    pageSize: viewSize,
+                    data: data.barsRefs,
+                    page: 0,
+                    sort: {field: "date", dir: "day"}
+                },
+                legend: {
+                    visible: false
+                },
+                seriesDefaults: {
+                    overlay: {
+                        gradient: "none"
+                    }
+                },
+                series: socRefSeries,
+                valueAxes: [{
+                    name: "quantity",
+                    min: 0,
+                    color: "#b8b6bc",
+                    majorGridLines: {
+                        visible: false
+                    },
+                    line: {
+                        visible: true,
+                        color: "#b8b6bc"
+                    }
+                }, {
+                    name: "total",
+                    min: 0,
+                    color: "#81a384",
+                    majorGridLines: {
+                        visible: false
+                    },
+                    line: {
+                        visible: true,
+                        color: "#81a384"
+                    }
+                }],
+                categoryAxis: {
+                    field: growthAxis,
+                    color: "#4f4c4a",
+                    line: {
+                        visible: true,
+                        color: "#4f4c4a"
+                    },
+                    majorGridLines: {
+                        visible: false
+                    }
+                },
+                chartArea: {
+                    background: ""
+                },
+                tooltip: {
+                    visible: true,
+                    template: "<span class='mid white'>#= series.name # <br>#= kendo.toString(value, 'n0') # referrals</span>"
+                },
+                transitions: true,
+                drag: onDrag,
+                dragEnd: onDragEnd,
+                zoom: onZoom
+
+            });
+        }
 
         createNewGrowthChart();
         createEngagementChart();
@@ -1412,7 +1825,49 @@ $(document).ready(function () {
         $("#donActiv svg text").attr("y", 134);
         $("#donEng svg text").attr("y", 134);
 
+        function onLegendRefClick(e) {
+            if (data.socChannels[e.pointIndex].visible == false) {
+                socRefSeries[e.pointIndex].visible = true;
+                data.ch.totalRef = parseFloat(data.ch.totalRef.replace(/,/g, ''));
+                for (i = 0; i < data.barsRefs.length; i++) {
+                    data.barsRefs[i].all_social = data.barsRefs[i].all_social + data.barsRefs[i][socRefSeries[e.pointIndex].field];
+                    data.ch.totalRef += parseFloat(data.barsRefs[i][socRefSeries[e.pointIndex].field]);
+                }
+                data.ch.totalRef = data.ch.totalRef.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                $("#totalRef").text(data.ch.totalRef);
+                console.log(data.ch.totalRef);
+            }
+            else {
+                socRefSeries[e.pointIndex].visible = false;
+                data.ch.totalRef = (typeof data.ch.totalRef == "string") ? parseFloat(data.ch.totalRef.replace(/,/g, '')) : data.ch.totalRef;
+                for (i = 0; i < data.barsRefs.length; i++) {
+                    data.barsRefs[i].all_social = data.barsRefs[i].all_social - data.barsRefs[i][socRefSeries[e.pointIndex].field];
+                    data.ch.totalRef -= parseFloat(data.barsRefs[i][socRefSeries[e.pointIndex].field]);
+                }
+                data.ch.totalRef = data.ch.totalRef.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                $("#totalRef").text(data.ch.totalRef);
+                console.log(data.ch.totalRef);
+            }
 
+            createSocRefChart();
+        }
+
+        //Insert change values
+        data.ch.totalRef = data.ch.totalRef.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $("#totalRef").text(data.ch.totalRef);
+        console.log(data.ch.totalRef);
+        createTotRefferalsChart();
+        $(document).bind("kendo:skinChange", createTotRefferalsChart);
+
+
+        var refChartLegends = $("#totRefferalsChart svg g").last().find("path");
+        var legendColors = {};
+        for (i = 1; i < refChartLegends.length; i++) {
+            legendColors[data.socChannels[i - 1].category] = refChartLegends[i].attributes.fill.value;
+        }
+
+        createSocRefChart();
+        $(document).bind("kendo:skinChange", createSocRefChart);
     }
 
     function startChange() {

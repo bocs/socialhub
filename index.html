@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/kendo.default.min.css">
     <link rel="stylesheet" href="css/kendo.common.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!--<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>-->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/kendo.all.min.js"></script>
@@ -83,6 +83,213 @@
             </div>
         </div>
 
+        <div class="row" id="pageContentTop">
+                <div class="col-sm-12">
+                    <div class="clearfix blackPanel">
+                        <div class="text-center head">
+                            <i class="fa fa-info-circle" title="The Executive Summary reports all major Key Performance Indicators for the prescribed time period for all platforms. Growth metrics in this section denote the number of new followers, in addition to the growth rate during the prescribed time period. Alternatively, percent increases/decreases of Points of Engagement, Number of Posts and Content Label Buckets metrics are compared to the previous time period (i.e, a dashboard showing metrics for August will show aggregate % increase/decrease over/from July) The Number of Posts section denotes the aggregate count of all messages published through Spredfast or auto-imported during the prescribed time period. The Points of Engagement section denotes the total aggregate number of interactions with published posts. Top Content Labels lists the single content label bucket with the highest average engagement (number of times employed vs. total engagement). Note: These metrics will not change with changes in platform view"></i>
+                        </div>
+                        <div class="clearfix heightFixPar marBotT contBuck">
+                            <div class="col-lg-offset-2 col-lg-3 col-md-4 col-sm-4 col-xs-3 lineH marTop"></div><div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 marTopMin text-center head">Executive summary</div><div class="col-lg-3 col-md-4 col-sm-4 col-xs-3 lineH marTop"></div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-offset-2 col-lg-2 col-md-3 col-xs-6 heightFix noPad">
+                                <div class="executiveContHead">
+                                    Growth
+                                </div>
+                                <div class="executiveCont bordRightDot">
+                                    <div class="dispBlock marBot">
+                                        <div class="executiveGreyBack rightSpaceS">
+                                            <i class="fa fa-globe"></i>
+                                        </div>
+                                        <div class="executiveGreyBack">
+                                            <span id="totalGrowth1"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveGreyBack">
+                                            <span id="totalGrowthPer"></span>
+                                        </div>
+                                    </div>
+                                    <div class="betweenRowsPar"><div class="betweenRows">&#916;</div></div>
+                                    <div class="dispBlock marBotS execFacebook">
+                                        <div class="executiveWhiteBack rightSpaceS">
+                                            <i class="fa fa-facebook-square"></i>
+                                        </div>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalGrowthFac"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalGrowthFacPer"></span>
+                                        </div>
+                                    </div>
+                                    <div class="dispBlock marBotS execTwitter">
+                                        <div class="executiveWhiteBack twitCorr rightSpaceS">
+                                            <i class="fa fa-twitter"></i>
+                                        </div>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalGrowthTwit"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalGrowthTwitPer"></span>
+                                        </div>
+                                    </div>
+                                    <div class="dispBlock marBotS execInstagram">
+                                        <div class="executiveWhiteBack rightSpaceS">
+                                            <i class="fa fa-instagram"></i>
+                                        </div>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalGrowthInst"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalGrowthInstPer"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-xs-6 heightFix noPad">
+                                <div class="executiveContHead">
+                                    Number of posts
+                                </div>
+                                <div class="executiveCont bordRightDot">
+                                    <div class="dispBlock marBot">
+                                        <div class="executiveGreyBack rightSpaceS">
+                                            <i class="fa fa-globe"></i>
+                                        </div>
+                                        <div class="executiveGreyBack">
+                                            <span id="totalPosts"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveGreyBack">
+                                            <span id="totalPostsPer"></span>
+                                        </div>
+                                    </div>
+                                    <div class="betweenRowsPar"><div class="betweenRows">(PTP)</div></div>
+                                    <div class="dispBlock marBotS execFacebook">
+                                        <div class="executiveWhiteBack rightSpaceS">
+                                            <i class="fa fa-facebook-square"></i>
+                                        </div>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPostsFac"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPostsFacPer"></span>
+                                        </div>
+                                    </div>
+                                    <div class="dispBlock marBotS execTwitter">
+                                        <div class="executiveWhiteBack twitCorr rightSpaceS">
+                                            <i class="fa fa-twitter"></i>
+                                        </div>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPostsTwit"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPostsTwitPer"></span>
+                                        </div>
+                                    </div>
+                                    <div class="dispBlock marBotS execInstagram">
+                                        <div class="executiveWhiteBack rightSpaceS">
+                                            <i class="fa fa-instagram"></i>
+                                        </div>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPostsInst"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPostsInstPer"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-xs-6 heightFix noPad">
+                                <div class="executiveContHead">
+                                    Total POE
+                                </div>
+                                <div class="executiveCont bordRightDot">
+                                    <div class="dispBlock marBot">
+                                        <div class="executiveGreyBack rightSpaceS">
+                                            <i class="fa fa-globe"></i>
+                                        </div>
+                                        <div class="executiveGreyBack">
+                                            <span id="totalPoints"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveGreyBack">
+                                            <span id="totalPointsPer"></span>
+                                        </div>
+                                    </div>
+                                    <div class="betweenRowsPar"><div class="betweenRows">(PTP)</div></div>
+                                    <div class="dispBlock marBotS execFacebook">
+                                        <div class="executiveWhiteBack rightSpaceS">
+                                            <i class="fa fa-facebook-square"></i>
+                                        </div>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPointsFac"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPointsFacPer"></span>
+                                        </div>
+                                    </div>
+                                    <div class="dispBlock marBotS execTwitter">
+                                        <div class="executiveWhiteBack twitCorr rightSpaceS">
+                                            <i class="fa fa-twitter"></i>
+                                        </div>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPointsTwit"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPointsTwitPer"></span>
+                                        </div>
+                                    </div>
+                                    <div class="dispBlock marBotS execInstagram">
+                                        <div class="executiveWhiteBack rightSpaceS">
+                                            <i class="fa fa-instagram"></i>
+                                        </div>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPointsInst"></span>
+                                        </div>
+                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
+                                        <div class="executiveWhiteBack">
+                                            <span id="totalPointsInstPer"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-xs-6 heightFix noPad">
+                                <div class="executiveContHead">
+                                    Top content buckets
+                                </div>
+                                <div class="executiveCont" id="top5labels">
+                                    <ul class="clearfix">
+                                        <li>
+                                            01. <span class="listLabelTitle" id="topLabelsA"></span> &nbsp; <span class="listLabelNum" id="topLabelsAc"></span>
+                                        </li>
+                                        <li>
+                                            02. <span class="listLabelTitle" id="topLabelsB"></span> &nbsp; <span class="listLabelNum" id="topLabelsBc"></span>
+                                        </li>
+                                        <li>
+                                            03. <span class="listLabelTitle" id="topLabelsC"></span> &nbsp; <span class="listLabelNum" id="topLabelsCc"></span>
+                                        </li>
+                                        <li>
+                                            04. <span class="listLabelTitle" id="topLabelsD"></span> &nbsp; <span class="listLabelNum" id="topLabelsDc"></span>
+                                        </li>
+                                        <li>
+                                            05. <span class="listLabelTitle" id="topLabelsE"></span> &nbsp; <span class="listLabelNum" id="topLabelsEc"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
         <div class="row">
             <div class="col-sm-12">
                 <div class="clearfix blackPanel">
@@ -143,108 +350,140 @@
         </div>
 
 
-        <!--<div class="row">
+        <div class="row">
             <div class="col-sm-12">
                 <div class="clearfix beigePanel panelHead">
                     <i class="fa fa-facebook-square selectModI"></i>
                     <div class="selectModP">
                         <select class="selectMod" id="selectModG">
-                            <option value="fa-facebook-square">Facebook goals</option>
-                            <option value="fa-twitter-square">Twitter goals</option>
-                            <option value="fa-instagram">Instagram goals</option>
+                            <option value="fa-facebook-square" name="facebook">Facebook goals</option>
+                            <option value="fa-twitter-square" name="twitter">Twitter goals</option>
+                            <option value="fa-instagram" name="instagram">Instagram goals</option>
                         </select>
                     </div>
-                    <span class="mid2">
-                        SELECT FROM THE DROP-DOWN MENU TO SET GOALS FOR EACH PLATFORM
-                    </span>
-                    <span class="infoIcons">
-                        <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                        <i class="fa fa-minus-circle minimizeIt" title="Collapse goals window" value="goalsContainer"></i>
-                    </span>
+            <!--<span class="mid2">-->
+                <!--SELECT FROM THE DROP-DOWN MENU TO SET GOALS FOR EACH PLATFORM-->
+            <!--</span>-->
+            <span class="infoIcons">
+                <i class="fa fa-info-circle se" title="info"></i> &nbsp;
+                <i class="fa fa-minus-circle minimizeIt" title="Collapse goals window" value="goalsContainer"></i>
+            </span>
                 </div>
             </div>
         </div>
         <div class="row" id="goalsContainer">
             <div class="col-sm-12">
                 <div class="clearfix beigePanel panelBody">
-                    <table class="col-md-offset-2 col-md-8 tableGoals">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Q1<br>goal</th>
-                                <th>Q2<br>goal</th>
-                                <th>Q3<br>goal</th>
-                                <th>Q4<br>goal</th>
-                                <th>2014<br>goal</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>GROWTH (Followers)</td>
-                                <td>14,100</td>
-                                <td>14,900</td>
-                                <td>15,600</td>
-                                <td>16,000</td>
-                                <td>17,500</td>
-                            </tr>
-                            <tr>
-                                <td>Weekly # OF POSTS</td>
-                                <td>28</td>
-                                <td>17</td>
-                                <td>31</td>
-                                <td>14</td>
-                                <td>22</td>
-                            </tr>
-                            <tr>
-                                <td>POINTS OF ENGAGEMENT P/POST</td>
-                                <td>600</td>
-                                <td>1,100</td>
-                                <td>1,400</td>
-                                <td>1,520</td>
-                                <td>1,700</td>
-                            </tr>
-                            <tr>
-                                <td>Weekly ENGAGEMENT RATE</td>
-                                <td>1.37%</td>
-                                <td>1.33%</td>
-                                <td>1.18%</td>
-                                <td>1.47%</td>
-                                <td>1.42%</td>
-                            </tr>
-                            <tr>
-                                <td>Weekly % BASE ACTIVATED</td>
-                                <td>0.8%</td>
-                                <td>0.8%</td>
-                                <td>0.7%</td>
-                                <td>0.7%</td>
-                                <td>0.7%</td>
-                            </tr>
-                            <tr>
-                                <td>Weekly IMPRESSIONS</td>
-                                <td>28,000</td>
-                                <td>19,000</td>
-                                <td>31,000</td>
-                                <td>33,800</td>
-                                <td>34,000</td>
-                            </tr>
-                            <tr>
-                                <td>Weekly REACH</td>
-                                <td>12,000</td>
-                                <td>11,273</td>
-                                <td>14,091</td>
-                                <td>15,455</td>
-                                <td>16,000</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="col-md-offset-8 col-md-4 btnGoals">
-                        <button class="btn btn-red">DISCARD CHANGES</button>
-                        <button class="btn btn-red">SAVE CHANGES</button>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-xs-1">
+                            <div class="goalArrContLeft">
+                                <i class="fa fa-angle-left goalArr"></i><br>
+                                <span id="goalPrevYear">2013</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-10 col-xs-10">
+                            <div id="goalsSaveInfo" class="clearfix saveAlert" style="display: none">
+                                <div class="alert-success infoPanel "><i class="fa fa-check-circle"></i> <span class="infoText">Your changes have been saved successfully</span></div>
+                            </div>
+                            <div id="goalsSaveWarning" class="clearfix saveAlert warningInfo" style="display: none">
+                                <div class="alert-warning infoPanel "><i class="fa fa-exclamation-triangle"></i> <span class="infoText">Your changes have not been saved</span></div>
+                            </div>
+                            <form id="form_goals" method="POST">
+                                <table class="tableGoals">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Q1<br>goal</th>
+                                        <th>Q2<br>goal</th>
+                                        <th>Q3<br>goal</th>
+                                        <th>Q4<br>goal</th>
+                                        <th><span class="goalsCurrYear">2014</span><br>goal</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>GROWTH (Followers)</td>
+                                        <td><input name="q1_growth" type="text" class="inputNumber" value="14,100"></td>
+                                        <td><input name="q2_growth" type="text" class="inputNumber" value="14,900"></td>
+                                        <td><input name="q3_growth" type="text" class="inputNumber" value="15,600"></td>
+                                        <td><input name="q4_growth" type="text" class="inputNumber" value="16,000"></td>
+                                        <td><input name="year_growth" type="text" class="inputNumber" value="17,500"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weekly # OF POSTS</td>
+                                        <td><input name="q1_weekly_num_posts" type="text" class="inputNumber" value="28"></td>
+                                        <td><input name="q2_weekly_num_posts" type="text" class="inputNumber" value="17"></td>
+                                        <td><input name="q3_weekly_num_posts" type="text" class="inputNumber" value="31"></td>
+                                        <td><input name="q4_weekly_num_posts" type="text" class="inputNumber" value="14"></td>
+                                        <td><input name="year_weekly_num_posts" type="text" class="inputNumber" value="22"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>POINTS OF ENGAGEMENT P/POST</td>
+                                        <td><input name="q1_poe_per_post" type="text" class="inputNumber" value="600"></td>
+                                        <td><input name="q2_poe_per_post" type="text" class="inputNumber" value="1,100"></td>
+                                        <td><input name="q3_poe_per_post" type="text" class="inputNumber" value="1,400"></td>
+                                        <td><input name="q4_poe_per_post" type="text" class="inputNumber" value="1,520"></td>
+                                        <td><input name="year_poe_per_post" type="text" class="inputNumber" value="1,700"></td>
+                                    </tr>
+                                    <tr class="hideIg hideTw">
+                                        <td>ENGAGEMENT RATE</td>
+                                        <td><input name="q1_weekly_eng_rate" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="1.37%"></td>
+                                        <td><input name="q2_weekly_eng_rate" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="1.31%"></td>
+                                        <td><input name="q3_weekly_eng_rate" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="1.18%"></td>
+                                        <td><input name="q4_weekly_eng_rate" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="1.47%"></td>
+                                        <td><input name="year_weekly_eng_rate" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="1.42%"></td>
+                                    </tr>
+                                    <tr class="hideIg hideTw">
+                                        <td>% BASE ACTIVATED</td>
+                                        <td><input name="q1_weekly_base_activated" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="0.8%"></td>
+                                        <td><input name="q2_weekly_base_activated" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="0.8%"></td>
+                                        <td><input name="q3_weekly_base_activated" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="0.7%"></td>
+                                        <td><input name="q4_weekly_base_activated" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="0.7%"></td>
+                                        <td><input name="year_weekly_base_activated" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="0.7%"></td>
+                                    </tr>
+                                    <tr class="hideIg hideTw">
+                                        <td>Weekly IMPRESSIONS</td>
+                                        <td><input name="q1_weekly_impressions" type="text" class="inputNumber" value="28,000"></td>
+                                        <td><input name="q2_weekly_impressions" type="text" class="inputNumber" value="19,000"></td>
+                                        <td><input name="q3_weekly_impressions" type="text" class="inputNumber" value="31,000"></td>
+                                        <td><input name="q4_weekly_impressions" type="text" class="inputNumber" value="33,000"></td>
+                                        <td><input name="year_weekly_impressions" type="text" class="inputNumber" value="34,000"></td>
+                                    </tr>
+                                    <tr class="hideIg hideTw">
+                                        <td>Weekly REACH</td>
+                                        <td><input name="q1_weekly_reach" type="text" class="inputNumber" value="12,000"></td>
+                                        <td><input name="q2_weekly_reach" type="text" class="inputNumber" value="11,375"></td>
+                                        <td><input name="q3_weekly_reach" type="text" class="inputNumber" value="14,091"></td>
+                                        <td><input name="q4_weekly_reach" type="text" class="inputNumber" value="15,445"></td>
+                                        <td><input name="year_weekly_reach" type="text" class="inputNumber" value="16,000"></td>
+                                    </tr>
+                                    <tr class="hideFb">
+                                        <td>ONE TO ONE ENGAGEMENT</td>
+                                        <td><input name="q1_one_to_one_eng" type="text" class="inputNumber" value="0"></td>
+                                        <td><input name="q2_one_to_one_eng" type="text" class="inputNumber" value="0"></td>
+                                        <td><input name="q3_one_to_one_eng" type="text" class="inputNumber" value="0"></td>
+                                        <td><input name="q4_one_to_one_eng" type="text" class="inputNumber" value="0"></td>
+                                        <td><input name="year_one_to_one_eng" type="text" class="inputNumber" value="0"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                        <div class="col-xs-1">
+                            <div class="goalArrContRight">
+                                <i class="fa fa-angle-right goalArr"></i><br>
+                                <span id="goalNextYear">2015</span>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-offset-8 col-sm-4 col-xs-offset-6 col-xs-6 btnGoals">
+                        <button class="btn btn-red" id="discard_changes">DISCARD CHANGES</button>
+                        <button class="btn btn-red" id="save_goals">SAVE CHANGES</button>
                     </div>
                 </div>
             </div>
-        </div>-->
-
+        </div>
 
         <div class="row">
             <div class="col-sm-12">
@@ -765,8 +1004,45 @@
         </div>
 
 
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="clearfix beigePanel panelHead head">
+                    <div class="head2">Social channel referrals</div>
+            <span class="infoIcons">
+                <i class="fa fa-info-circle se" title="info"></i> &nbsp;
+                <i class="fa fa-minus-circle minimizeIt" title="Collapse advocates window" value="referralsContainer"></i>
+            </span>
+                </div>
+            </div>
+        </div>
 
-<!--        <div class="row">
+        <div class="row marBotS" id="referralsContainer">
+            <div class="col-sm-12">
+                <div class="clearfix beigePanel noTransform panelBody">
+                    <div class="col-lg-5 col-md-6 col-sm-12 bordRightDot noPad">
+                        <div class="clearfix">
+                            <br><br>
+                            <div id="totRefferalsChart" class="donArea"></div>
+                            <div class="donChartCont">
+                                <div class="insideDonAr">
+                                    <div id="totalRef" class="insideDon"></div>
+                                    <div class="insideDonUn">Total Referrals<br><span id="refPeriod"></span></div>
+                                </div>
+                            </div>
+                            <br><br><br><br><br><br>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12">
+                        <div class="chartTitle">Social referrals by day</div>
+                        <div class="chartDesc"><img src="http://abercrombie.dev/images/axis_line_green.png"> Total site traffic &nbsp; <img src="http://abercrombie.dev/images/axis_line_grey.png"> Social referrals </div>
+                        <div id="socRefChart"></div>
+                        <div class="text-center smaller marTop upperCase">Roll over each bar for values</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-sm-12">
                 <div class="clearfix beigePanel panelHead">
                     <div class="head2">Competitive data</div>
@@ -836,7 +1112,7 @@
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
 
 
 
@@ -854,8 +1130,8 @@
 
 
 <script src="js/hub.js"></script>
-<script src="js/config.js"></script>
-<script src="js/app.js"></script>
+<!--<script src="js/config.js"></script>-->
+<!--<script src="js/app.js"></script>-->
 
 
 </body>
