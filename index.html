@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/kendo.default.min.css">
     <link rel="stylesheet" href="css/kendo.common.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery.multiselect.css">
     <link rel="stylesheet" href="css/style.css">
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/kendo.all.min.js"></script>
     <script src="js/papaparse.min.js"></script>
+    <script src="js/jquery.multiselect.min.js"></script>
+
 
 </head>
 <body>
@@ -418,8 +423,9 @@
                         </div>
                         <div class="col-md-8 col-sm-10 col-xs-10">
                             <div id="goalsSaveInfo" class="clearfix saveAlert" style="display: none">
-                                <div class="alert-success infoPanel "><i class="fa fa-check-circle"></i> <span
-                                        class="infoText">Your changes have been saved successfully</span></div>
+                                <div class="alert-success infoPanel "><i class="fa fa-check-circle"></i>
+                                    <span class="infoText">Your changes have been saved successfully</span>
+                                </div>
                             </div>
                             <div id="goalsSaveWarning" class="clearfix saveAlert warningInfo" style="display: none">
                                 <div class="alert-warning infoPanel "><i class="fa fa-exclamation-triangle"></i> <span
@@ -846,51 +852,51 @@
                 </div>
 
 
-                <!--<div class="row">-->
-                    <!--<div class="col-sm-12">-->
-                        <!--<div class="clearfix beigePanelCut bordTop head">-->
-                            <!--One-to-one engagement-->
-                                    <!--<span class="infoIcons">-->
-                                        <!--<i class="fa fa-info-circle se" title="info"></i> &nbsp;-->
-                                        <!--<i class="fa fa-minus-circle minimizeIt" title="Collapse advocates window"-->
-                                           <!--value="advocatesContainer"></i>-->
-                                    <!--</span>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanelCut bordTop head">
+                            One-to-one engagement
+                                    <span class="infoIcons">
+                                        <i class="fa fa-info-circle se" title="info"></i> &nbsp;
+                                        <i class="fa fa-minus-circle minimizeIt" title="Collapse advocates window"
+                                           value="advocatesContainer"></i>
+                                    </span>
+                        </div>
+                    </div>
+                </div>
 
-                <!--<div class="row" id="advocatesContainer">-->
-                    <!--<div class="col-sm-12">-->
-                        <!--<div class="clearfix beigePanel">-->
-                            <!--<div class="col-md-5">-->
-                                <!--<div class="clearfix">-->
-                                    <!--<div class="col-sm-12 bordRightDot noPad">-->
-                                        <!--<br>-->
+                <div class="row" id="advocatesContainer">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanel">
+                            <div class="col-md-5">
+                                <div class="clearfix">
+                                    <div class="col-sm-12 bordRightDot noPad">
+                                        <br>
 
-                                        <!--<div class="changeStatus">-->
-                                            <!--<div class="changeStatusPlus">-->
-                                                <!--<img src="images/arrow_up.png">-->
+                                        <div class="changeStatus">
+                                            <div class="changeStatusPlus">
+                                                <img src="images/arrow_up.png">
 
-                                                <!--<div id="advocatesChartS" class="inlineD"></div>-->
-                                                <!--<span id="advocatesChange"></span>-->
+                                                <div id="advocatesChartS" class="inlineD"></div>
+                                                <span id="advocatesChange"></span>
 
-                                                <!--<div class="newFollowText"><i class="fa fa-caret-up"></i> 1-1-->
-                                                    <!--Engagements-->
-                                                <!--</div>-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                        <!--<br>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="col-md-7">-->
-                                <!--<div class="text-center chartHead marBot">Engagements by day</div>-->
-                                <!--<div id="commentsChart"></div>-->
-                                <!--<div class="text-center smaller marTop">Rollover each bar for values</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
+                                                <div class="newFollowText"><i class="fa fa-caret-up"></i> 1-1
+                                                    Engagements
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="text-center chartHead marBot">Engagements by day</div>
+                                <div id="commentsChart"></div>
+                                <div class="text-center smaller marTop">Rollover each bar for values</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-sm-12">
@@ -1483,7 +1489,6 @@
 <script src="js/hub.js"></script>
 <script src="js/config.js"></script>
 <script src="js/app.js"></script>
-
 
 </body>
 </html>

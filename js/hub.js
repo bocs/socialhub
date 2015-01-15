@@ -50,7 +50,7 @@ $(document).ready(function () {
                 d2.resolve();
             }
         });
-        $.when(d1,d2).then (function(){
+        $.when(d1, d2).then(function () {
             fillPage();
         })
     }
@@ -58,10 +58,10 @@ $(document).ready(function () {
     getCsvs();
 
 
-    var monthNames = [ "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December" ];
+    var monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
 
-    var dayNames = [ "Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" ];
+    var dayNames = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
 
     Array.max = function (array) {
         return Math.max.apply(Math, array);
@@ -830,6 +830,7 @@ $(document).ready(function () {
             $("#" + val).text(data.ch[val]);
         }
 
+
         $(".fa-info-circle, .fa-minus-circle").kendoTooltip({
             width: 320,
             position: "left"
@@ -863,7 +864,11 @@ $(document).ready(function () {
                 contName = idName.substr(0, idName.length - 9);
                 console.log(idName);
                 console.log(contName);
-                $(e.currentTarget).kendoTooltip({width: 120, position: "left", content: "Expand " + contName + " window" }).data("kendoTooltip");
+                $(e.currentTarget).kendoTooltip({
+                    width: 120,
+                    position: "left",
+                    content: "Expand " + contName + " window"
+                }).data("kendoTooltip");
             }
             else if ($(e.currentTarget).hasClass("fa-plus-circle")) {
                 $(e.currentTarget).removeClass("fa-plus-circle").addClass("fa-minus-circle");
@@ -871,7 +876,11 @@ $(document).ready(function () {
                 kendo.fx($("#" + idName)).expand("vertical").stop().play();
                 $(e.currentTarget).data("kendoTooltip").destroy();
                 contName = idName.substr(0, idName.length - 9);
-                $(e.currentTarget).kendoTooltip({width: 120, position: "left", content: "Collapse " + contName + " window"}).data("kendoTooltip");
+                $(e.currentTarget).kendoTooltip({
+                    width: 120,
+                    position: "left",
+                    content: "Collapse " + contName + " window"
+                }).data("kendoTooltip");
             }
         });
 
@@ -1337,7 +1346,7 @@ $(document).ready(function () {
                     data: currentData,
                     pageSize: viewSize,
                     page: 0,
-                    sort: { field: "date", dir: "day" }
+                    sort: {field: "date", dir: "day"}
                 },
                 title: {
                     text: ".",
@@ -1948,26 +1957,72 @@ $(document).ready(function () {
     });
 
 
-//    $("#selectModG").change(function () {
-//            $( "#selectModG option:selected" ).each(function() {
-//                $(".selectModI")[0].className = "selectModI";
-//                $(".selectModI")[0].className = "fa " + $( this ).val() + " selectModI";
-//                $(".selectModI")[1].className = "selectModI";
-//                $(".selectModI")[1].className = "fa " + $( this ).val() + " selectModI";
-//                $( "#selectModA" ).val( $( this ).val() );
-//            });
-//        }).change();
+    $("#selectModG").change(function () {
+        $("#selectModG option:selected").each(function () {
+            $(".selectModI")[0].className = "selectModI";
+            $(".selectModI")[0].className = "fa " + $(this).val() + " selectModI";
+            $(".selectModI")[1].className = "selectModI";
+            $(".selectModI")[1].className = "fa " + $(this).val() + " selectModI";
+            $("#selectModA").val($(this).val());
+        });
+    }).change();
 
     $("#selectModA").change(function () {
         $("#selectModA option:selected").each(function () {
             $(".selectModI")[0].className = "selectModI";
             $(".selectModI")[0].className = "fa " + $(this).val() + " selectModI";
-//                $(".selectModI")[1].className = "selectModI";
-//                $(".selectModI")[1].className = "fa " + $( this ).val() + " selectModI";
-//                $( "#selectModG" ).val( $( this ).val() );
+            $(".selectModI")[1].className = "selectModI";
+            $(".selectModI")[1].className = "fa " + $(this).val() + " selectModI";
+            $("#selectModG").val($(this).val());
         });
     }).change();
 
+
+    //goals section
+
+    $('#save_goals').on('click', function () {
+        $("#goalsSaveInfo").show("drop", {direction: "up"}, 500);
+        setTimeout(function() {
+            $("#goalsSaveInfo").removeClass("hidden").hide("drop", {direction: "down"}, 500);
+        }, 2000);
+    });
+
+    var selectsLabels = $("#labelsSelects select");
+    for (var i = 0; i < selectsLabels.length; i++) {
+        selectsLabels[i].selectedIndex = -1;
+    }
+
+    var filterParentClass, filterInputField;
+    $("#labelsContainer select").multiselect({
+        open: function(){
+            filterParentClass = this.className.replace("form-control ", "");
+            $(".ui-multiselect-menu." + filterParentClass).find("input.filterLabels").focus();
+        }
+    });
+
+
+    //styles for dropdowns
+    var selectsLabelsNew = $("#labelsSelects button");
+    var selectsLabelsList = $(".ui-multiselect-menu");
+    var filterValue;
+    for (var i = 0; i < selectsLabelsNew.length; i++) {
+        selectsLabelsNew[i].className = ("ui-multiselect ui-widget ui-state-default ui-corner-all " + selectsLabels[i].className);
+        selectsLabelsNew[i].removeAttribute("style");
+        selectsLabelsList[i].className = ("ui-multiselect-menu ui-widget ui-widget-content ui-corner-all " + selectsLabels[i].className.replace('form-control', ''));
+
+        if ($(selectsLabelsList[i]).find("input.filterLabels").length == 0) {
+            $(selectsLabelsList[i]).find("div.ui-widget-header").after('<input class="filterLabels" id="multiselect_filter_' + i + '" placeholder="start typing...">');
+        }
+        $("#multiselect_filter_" + i)[0].oninput = function () {
+            $("#" + this.id).next("ul.ui-multiselect-checkboxes li input[title*=fe]");
+            filterValue = this.value;
+            $("#" + this.id).next().find("li").removeClass("hidden").addClass("hidden");
+            $("#" + this.id).next().find("li input[title]").filter(function () {
+                return this.title.toLowerCase().indexOf(filterValue.toLowerCase()) > -1;
+            }).parent().parent().removeClass("hidden");
+        };
+
+    }
 
     //Sample data for goals
     //var goalsCurrYear = 2014;

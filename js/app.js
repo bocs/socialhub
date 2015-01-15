@@ -4,7 +4,7 @@ var App = {
         var self = object;
 
         this.backgroundColor(self);
-        this.backgroundImage(self);
+        //this.backgroundImage(self);
         this.fontSizeCustomerName(self);
         this.customerName(self);
         this.customerNameColor(self);
