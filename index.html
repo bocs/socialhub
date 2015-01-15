@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/kendo.default.min.css">
     <link rel="stylesheet" href="css/kendo.common.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <!--<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>-->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/kendo.all.min.js"></script>
@@ -22,14 +22,16 @@
         <div class="row">
             <div class="col-xs-12 clearfix topPanelT">
                 <i class="fa fa-cube"></i> Custom Reports <span>beta</span>
-                <div class="userInfo"><i class="fa fa-user"></i> Matthew Cunningham Test <i class="fa fa-angle-down"></i></div>
+
+                <div class="userInfo"><i class="fa fa-user"></i> Matthew Cunningham Test <i
+                        class="fa fa-angle-down"></i></div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 logoRow">
                 Spredfast Social Hub
                 <!--<div class="rightF">-->
-                    <!--<img src="images/SF-Logo-small-white-text.png">-->
+                <!--<img src="images/SF-Logo-small-white-text.png">-->
                 <!--</div>-->
             </div>
         </div>
@@ -40,254 +42,281 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="clearfix beigePanelTop">
-                <div class="col-lg-1 col-md-1 col-sm-12 redFilt padTr">
+                    <div class="col-lg-1 col-md-1 col-sm-12 redFilt padTr">
                     <span>
                         Filter by
                     </span>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 padTb">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 padTb">
                     <span id="openFilterDate" class="point">
                         From: &nbsp;
                     </span>
-                    <input id="filterDate" class="dateInput marTopU" value="MM / dd / yy" /> &nbsp;
-                    To: &nbsp;
-                    <input id="filterDateTo" class="dateInput marTopU" value="MM / dd / yy" />
-                </div>
-                <!--<div class="col-lg-3 col-sm-6 col-xs-6 bordRight padTb" style="display: none;">
-                    Region: &nbsp;
-                    <label class="radio-inline">
-                        <input type="radio" name="region" value="U.S." checked>
-                        <span>U.S.</span>
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="region" value="U.K.">
-                        <span>U.K.</span>
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="region" value="International">
-                        <span>International</span>
-                    </label>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-xs-6 padTb" style="display: none;">
-                    Brand: &nbsp;
-                    <label class="radio-inline">
-                        <input type="radio" name="brand" value="brand1" checked>
-                        <span>Brand 1</span>
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="brand" value="brand2">
-                        <span>Brand 2</span>
-                    </label>
-                </div>-->
+                        <input id="filterDate" name="filterDate" class="dateInput marTopU" value="MM / dd / yy"/> &nbsp;
+                        To: &nbsp;
+                        <input id="filterDateTo" name="filterDateTo" class="dateInput marTopU" value="MM / dd / yy"/>
+                    </div>
+                    <!--<div class="col-lg-3 col-sm-6 col-xs-6 bordRight padTb" style="display: none;">
+                        Region: &nbsp;
+                        <label class="radio-inline">
+                            <input type="radio" name="region" value="U.S." checked>
+                            <span>U.S.</span>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="region" value="U.K.">
+                            <span>U.K.</span>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="region" value="International">
+                            <span>International</span>
+                        </label>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-xs-6 padTb" style="display: none;">
+                        Brand: &nbsp;
+                        <label class="radio-inline">
+                            <input type="radio" name="brand" value="brand1" checked>
+                            <span>Brand 1</span>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="brand" value="brand2">
+                            <span>Brand 2</span>
+                        </label>
+                    </div>-->
                 </div>
             </div>
         </div>
 
         <div class="row" id="pageContentTop">
-                <div class="col-sm-12">
-                    <div class="clearfix blackPanel">
-                        <div class="text-center head">
-                            <i class="fa fa-info-circle" title="The Executive Summary reports all major Key Performance Indicators for the prescribed time period for all platforms. Growth metrics in this section denote the number of new followers, in addition to the growth rate during the prescribed time period. Alternatively, percent increases/decreases of Points of Engagement, Number of Posts and Content Label Buckets metrics are compared to the previous time period (i.e, a dashboard showing metrics for August will show aggregate % increase/decrease over/from July) The Number of Posts section denotes the aggregate count of all messages published through Spredfast or auto-imported during the prescribed time period. The Points of Engagement section denotes the total aggregate number of interactions with published posts. Top Content Labels lists the single content label bucket with the highest average engagement (number of times employed vs. total engagement). Note: These metrics will not change with changes in platform view"></i>
+            <div class="col-sm-12">
+                <div class="clearfix blackPanel blackPanelEM">
+                    <div class="text-center head">
+                        <i class="fa fa-info-circle"
+                           title="The Executive Summary reports all major Key Performance Indicators for the prescribed time period for all platforms. Growth metrics in this section denote the number of new followers, in addition to the growth rate during the prescribed time period. Alternatively, percent increases/decreases of Points of Engagement, Number of Posts and Content Label Buckets metrics are compared to the previous time period (i.e, a dashboard showing metrics for August will show aggregate % increase/decrease over/from July) The Number of Posts section denotes the aggregate count of all messages published through Spredfast or auto-imported during the prescribed time period. The Points of Engagement section denotes the total aggregate number of interactions with published posts. Top Content Labels lists the single content label bucket with the highest average engagement (number of times employed vs. total engagement). Note: These metrics will not change with changes in platform view"></i>
+                    </div>
+                    <div class="clearfix heightFixPar marBotT contBuck">
+                        <div class="col-lg-offset-2 col-lg-3 col-md-4 col-sm-4 col-xs-3 lineH marTop"></div>
+                        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 marTopMin text-center head">Executive summary
                         </div>
-                        <div class="clearfix heightFixPar marBotT contBuck">
-                            <div class="col-lg-offset-2 col-lg-3 col-md-4 col-sm-4 col-xs-3 lineH marTop"></div><div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 marTopMin text-center head">Executive summary</div><div class="col-lg-3 col-md-4 col-sm-4 col-xs-3 lineH marTop"></div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-offset-2 col-lg-2 col-md-3 col-xs-6 heightFix noPad">
-                                <div class="executiveContHead">
-                                    Growth
-                                </div>
-                                <div class="executiveCont bordRightDot">
-                                    <div class="dispBlock marBot">
-                                        <div class="executiveGreyBack rightSpaceS">
-                                            <i class="fa fa-globe"></i>
-                                        </div>
-                                        <div class="executiveGreyBack">
-                                            <span id="totalGrowth1"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveGreyBack">
-                                            <span id="totalGrowthPer"></span>
-                                        </div>
-                                    </div>
-                                    <div class="betweenRowsPar"><div class="betweenRows">&#916;</div></div>
-                                    <div class="dispBlock marBotS execFacebook">
-                                        <div class="executiveWhiteBack rightSpaceS">
-                                            <i class="fa fa-facebook-square"></i>
-                                        </div>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalGrowthFac"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalGrowthFacPer"></span>
-                                        </div>
-                                    </div>
-                                    <div class="dispBlock marBotS execTwitter">
-                                        <div class="executiveWhiteBack twitCorr rightSpaceS">
-                                            <i class="fa fa-twitter"></i>
-                                        </div>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalGrowthTwit"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalGrowthTwitPer"></span>
-                                        </div>
-                                    </div>
-                                    <div class="dispBlock marBotS execInstagram">
-                                        <div class="executiveWhiteBack rightSpaceS">
-                                            <i class="fa fa-instagram"></i>
-                                        </div>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalGrowthInst"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalGrowthInstPer"></span>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-3 lineH marTop"></div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-offset-2 col-lg-2 col-md-3 col-xs-6 heightFix noPad">
+                            <div class="executiveContHead">
+                                Growth
                             </div>
-                            <div class="col-lg-2 col-md-3 col-xs-6 heightFix noPad">
-                                <div class="executiveContHead">
-                                    Number of posts
-                                </div>
-                                <div class="executiveCont bordRightDot">
-                                    <div class="dispBlock marBot">
-                                        <div class="executiveGreyBack rightSpaceS">
-                                            <i class="fa fa-globe"></i>
-                                        </div>
-                                        <div class="executiveGreyBack">
-                                            <span id="totalPosts"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveGreyBack">
-                                            <span id="totalPostsPer"></span>
-                                        </div>
+                            <div class="executiveCont bordRightDot">
+                                <div class="dispBlock marBot">
+                                    <div class="executiveGreyBack rightSpaceS">
+                                        <i class="fa fa-globe"></i>
                                     </div>
-                                    <div class="betweenRowsPar"><div class="betweenRows">(PTP)</div></div>
-                                    <div class="dispBlock marBotS execFacebook">
-                                        <div class="executiveWhiteBack rightSpaceS">
-                                            <i class="fa fa-facebook-square"></i>
-                                        </div>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPostsFac"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPostsFacPer"></span>
-                                        </div>
+                                    <div class="executiveGreyBack">
+                                        <span id="totalGrowth1"></span>
                                     </div>
-                                    <div class="dispBlock marBotS execTwitter">
-                                        <div class="executiveWhiteBack twitCorr rightSpaceS">
-                                            <i class="fa fa-twitter"></i>
-                                        </div>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPostsTwit"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPostsTwitPer"></span>
-                                        </div>
-                                    </div>
-                                    <div class="dispBlock marBotS execInstagram">
-                                        <div class="executiveWhiteBack rightSpaceS">
-                                            <i class="fa fa-instagram"></i>
-                                        </div>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPostsInst"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPostsInstPer"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-xs-6 heightFix noPad">
-                                <div class="executiveContHead">
-                                    Total POE
-                                </div>
-                                <div class="executiveCont bordRightDot">
-                                    <div class="dispBlock marBot">
-                                        <div class="executiveGreyBack rightSpaceS">
-                                            <i class="fa fa-globe"></i>
-                                        </div>
-                                        <div class="executiveGreyBack">
-                                            <span id="totalPoints"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveGreyBack">
-                                            <span id="totalPointsPer"></span>
-                                        </div>
-                                    </div>
-                                    <div class="betweenRowsPar"><div class="betweenRows">(PTP)</div></div>
-                                    <div class="dispBlock marBotS execFacebook">
-                                        <div class="executiveWhiteBack rightSpaceS">
-                                            <i class="fa fa-facebook-square"></i>
-                                        </div>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPointsFac"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPointsFacPer"></span>
-                                        </div>
-                                    </div>
-                                    <div class="dispBlock marBotS execTwitter">
-                                        <div class="executiveWhiteBack twitCorr rightSpaceS">
-                                            <i class="fa fa-twitter"></i>
-                                        </div>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPointsTwit"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPointsTwitPer"></span>
-                                        </div>
-                                    </div>
-                                    <div class="dispBlock marBotS execInstagram">
-                                        <div class="executiveWhiteBack rightSpaceS">
-                                            <i class="fa fa-instagram"></i>
-                                        </div>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPointsInst"></span>
-                                        </div>
-                                        <span class="plusMinus"><i class="fa fa-plus"></i></span>
-                                        <div class="executiveWhiteBack">
-                                            <span id="totalPointsInstPer"></span>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
 
+                                    <div class="executiveGreyBack">
+                                        <span id="totalGrowthPer"></span>
+                                    </div>
+                                </div>
+                                <div class="betweenRowsPar">
+                                    <div class="betweenRows">&#916;</div>
+                                </div>
+                                <div class="dispBlock marBotS execFacebook">
+                                    <div class="executiveWhiteBack rightSpaceS">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </div>
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalGrowthFac"></span>
+                                    </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
+
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalGrowthFacPer"></span>
+                                    </div>
+                                </div>
+                                <div class="dispBlock marBotS execTwitter">
+                                    <div class="executiveWhiteBack twitCorr rightSpaceS">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalGrowthTwit"></span>
+                                    </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
+
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalGrowthTwitPer"></span>
+                                    </div>
+                                </div>
+                                <div class="dispBlock marBotS execInstagram">
+                                    <div class="executiveWhiteBack rightSpaceS">
+                                        <i class="fa fa-instagram"></i>
+                                    </div>
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalGrowthInst"></span>
+                                    </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
+
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalGrowthInstPer"></span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-2 col-md-3 col-xs-6 heightFix noPad">
-                                <div class="executiveContHead">
-                                    Top content buckets
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-xs-6 heightFix noPad">
+                            <div class="executiveContHead">
+                                Number of posts
+                            </div>
+                            <div class="executiveCont bordRightDot">
+                                <div class="dispBlock marBot">
+                                    <div class="executiveGreyBack rightSpaceS">
+                                        <i class="fa fa-globe"></i>
+                                    </div>
+                                    <div class="executiveGreyBack">
+                                        <span id="totalPosts"></span>
+                                    </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
+
+                                    <div class="executiveGreyBack">
+                                        <span id="totalPostsPer"></span>
+                                    </div>
                                 </div>
-                                <div class="executiveCont" id="top5labels">
-                                    <ul class="clearfix">
-                                        <li>
-                                            01. <span class="listLabelTitle" id="topLabelsA"></span> &nbsp; <span class="listLabelNum" id="topLabelsAc"></span>
-                                        </li>
-                                        <li>
-                                            02. <span class="listLabelTitle" id="topLabelsB"></span> &nbsp; <span class="listLabelNum" id="topLabelsBc"></span>
-                                        </li>
-                                        <li>
-                                            03. <span class="listLabelTitle" id="topLabelsC"></span> &nbsp; <span class="listLabelNum" id="topLabelsCc"></span>
-                                        </li>
-                                        <li>
-                                            04. <span class="listLabelTitle" id="topLabelsD"></span> &nbsp; <span class="listLabelNum" id="topLabelsDc"></span>
-                                        </li>
-                                        <li>
-                                            05. <span class="listLabelTitle" id="topLabelsE"></span> &nbsp; <span class="listLabelNum" id="topLabelsEc"></span>
-                                        </li>
-                                    </ul>
+                                <div class="betweenRowsPar">
+                                    <div class="betweenRows">(PTP)</div>
                                 </div>
+                                <div class="dispBlock marBotS execFacebook">
+                                    <div class="executiveWhiteBack rightSpaceS">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </div>
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPostsFac"></span>
+                                    </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
+
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPostsFacPer"></span>
+                                    </div>
+                                </div>
+                                <div class="dispBlock marBotS execTwitter">
+                                    <div class="executiveWhiteBack twitCorr rightSpaceS">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPostsTwit"></span>
+                                    </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
+
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPostsTwitPer"></span>
+                                    </div>
+                                </div>
+                                <div class="dispBlock marBotS execInstagram">
+                                    <div class="executiveWhiteBack rightSpaceS">
+                                        <i class="fa fa-instagram"></i>
+                                    </div>
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPostsInst"></span>
+                                    </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
+
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPostsInstPer"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-xs-6 heightFix noPad">
+                            <div class="executiveContHead">
+                                Total POE
+                            </div>
+                            <div class="executiveCont bordRightDot">
+                                <div class="dispBlock marBot">
+                                    <div class="executiveGreyBack rightSpaceS">
+                                        <i class="fa fa-globe"></i>
+                                    </div>
+                                    <div class="executiveGreyBack">
+                                        <span id="totalPoints"></span>
+                                    </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
+
+                                    <div class="executiveGreyBack">
+                                        <span id="totalPointsPer"></span>
+                                    </div>
+                                </div>
+                                <div class="betweenRowsPar">
+                                    <div class="betweenRows">(PTP)</div>
+                                </div>
+                                <div class="dispBlock marBotS execFacebook">
+                                    <div class="executiveWhiteBack rightSpaceS">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </div>
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPointsFac"></span>
+                                    </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
+
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPointsFacPer"></span>
+                                    </div>
+                                </div>
+                                <div class="dispBlock marBotS execTwitter">
+                                    <div class="executiveWhiteBack twitCorr rightSpaceS">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPointsTwit"></span>
+                                    </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
+
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPointsTwitPer"></span>
+                                    </div>
+                                </div>
+                                <div class="dispBlock marBotS execInstagram">
+                                    <div class="executiveWhiteBack rightSpaceS">
+                                        <i class="fa fa-instagram"></i>
+                                    </div>
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPointsInst"></span>
+                                    </div>
+                                    <span class="plusMinus"><i class="fa fa-plus"></i></span>
+
+                                    <div class="executiveWhiteBack">
+                                        <span id="totalPointsInstPer"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-xs-6 heightFix noPad">
+                            <div class="executiveContHead">
+                                Top content buckets
+                            </div>
+                            <div class="executiveCont" id="top5labels">
+                                <ul class="clearfix">
+                                    <li>
+                                        01. <span class="listLabelTitle" id="topLabelsA"></span> &nbsp; <span
+                                            class="listLabelNum" id="topLabelsAc"></span>
+                                    </li>
+                                    <li>
+                                        02. <span class="listLabelTitle" id="topLabelsB"></span> &nbsp; <span
+                                            class="listLabelNum" id="topLabelsBc"></span>
+                                    </li>
+                                    <li>
+                                        03. <span class="listLabelTitle" id="topLabelsC"></span> &nbsp; <span
+                                            class="listLabelNum" id="topLabelsCc"></span>
+                                    </li>
+                                    <li>
+                                        04. <span class="listLabelTitle" id="topLabelsD"></span> &nbsp; <span
+                                            class="listLabelNum" id="topLabelsDc"></span>
+                                    </li>
+                                    <li>
+                                        05. <span class="listLabelTitle" id="topLabelsE"></span> &nbsp; <span
+                                            class="listLabelNum" id="topLabelsEc"></span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
 
         <div class="row">
@@ -325,19 +354,24 @@
                             <div class="executiveCont">
                                 <ul class="clearfix">
                                     <li>
-                                        01. <span class="listLabelTitle" id="listLabelA"></span> &nbsp; <span class="listLabelNum" id="listLabelAc"></span>
+                                        01. <span class="listLabelTitle" id="listLabelA"></span> &nbsp; <span
+                                            class="listLabelNum" id="listLabelAc"></span>
                                     </li>
                                     <li>
-                                        04. <span class="listLabelTitle" id="listLabelD"></span> &nbsp; <span class="listLabelNum" id="listLabelDc"></span>
+                                        04. <span class="listLabelTitle" id="listLabelD"></span> &nbsp; <span
+                                            class="listLabelNum" id="listLabelDc"></span>
                                     </li>
                                     <li>
-                                        02. <span class="listLabelTitle" id="listLabelB"></span> &nbsp; <span class="listLabelNum" id="listLabelBc"></span>
+                                        02. <span class="listLabelTitle" id="listLabelB"></span> &nbsp; <span
+                                            class="listLabelNum" id="listLabelBc"></span>
                                     </li>
                                     <li>
-                                        05. <span class="listLabelTitle" id="listLabelE"></span> &nbsp; <span class="listLabelNum" id="listLabelEc"></span>
+                                        05. <span class="listLabelTitle" id="listLabelE"></span> &nbsp; <span
+                                            class="listLabelNum" id="listLabelEc"></span>
                                     </li>
                                     <li>
-                                        03. <span class="listLabelTitle" id="listLabelC"></span> &nbsp; <span class="listLabelNum" id="listLabelCc"></span>
+                                        03. <span class="listLabelTitle" id="listLabelC"></span> &nbsp; <span
+                                            class="listLabelNum" id="listLabelCc"></span>
                                     </li>
                                 </ul>
 
@@ -354,6 +388,7 @@
             <div class="col-sm-12">
                 <div class="clearfix beigePanel panelHead">
                     <i class="fa fa-facebook-square selectModI"></i>
+
                     <div class="selectModP">
                         <select class="selectMod" id="selectModG">
                             <option value="fa-facebook-square" name="facebook">Facebook goals</option>
@@ -361,9 +396,9 @@
                             <option value="fa-instagram" name="instagram">Instagram goals</option>
                         </select>
                     </div>
-            <!--<span class="mid2">-->
-                <!--SELECT FROM THE DROP-DOWN MENU TO SET GOALS FOR EACH PLATFORM-->
-            <!--</span>-->
+                    <!--<span class="mid2">-->
+                    <!--SELECT FROM THE DROP-DOWN MENU TO SET GOALS FOR EACH PLATFORM-->
+                    <!--</span>-->
             <span class="infoIcons">
                 <i class="fa fa-info-circle se" title="info"></i> &nbsp;
                 <i class="fa fa-minus-circle minimizeIt" title="Collapse goals window" value="goalsContainer"></i>
@@ -383,10 +418,12 @@
                         </div>
                         <div class="col-md-8 col-sm-10 col-xs-10">
                             <div id="goalsSaveInfo" class="clearfix saveAlert" style="display: none">
-                                <div class="alert-success infoPanel "><i class="fa fa-check-circle"></i> <span class="infoText">Your changes have been saved successfully</span></div>
+                                <div class="alert-success infoPanel "><i class="fa fa-check-circle"></i> <span
+                                        class="infoText">Your changes have been saved successfully</span></div>
                             </div>
                             <div id="goalsSaveWarning" class="clearfix saveAlert warningInfo" style="display: none">
-                                <div class="alert-warning infoPanel "><i class="fa fa-exclamation-triangle"></i> <span class="infoText">Your changes have not been saved</span></div>
+                                <div class="alert-warning infoPanel "><i class="fa fa-exclamation-triangle"></i> <span
+                                        class="infoText">Your changes have not been saved</span></div>
                             </div>
                             <form id="form_goals" method="POST">
                                 <table class="tableGoals">
@@ -407,63 +444,99 @@
                                         <td><input name="q2_growth" type="text" class="inputNumber" value="14,900"></td>
                                         <td><input name="q3_growth" type="text" class="inputNumber" value="15,600"></td>
                                         <td><input name="q4_growth" type="text" class="inputNumber" value="16,000"></td>
-                                        <td><input name="year_growth" type="text" class="inputNumber" value="17,500"></td>
+                                        <td><input name="year_growth" type="text" class="inputNumber" value="17,500">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Weekly # OF POSTS</td>
-                                        <td><input name="q1_weekly_num_posts" type="text" class="inputNumber" value="28"></td>
-                                        <td><input name="q2_weekly_num_posts" type="text" class="inputNumber" value="17"></td>
-                                        <td><input name="q3_weekly_num_posts" type="text" class="inputNumber" value="31"></td>
-                                        <td><input name="q4_weekly_num_posts" type="text" class="inputNumber" value="14"></td>
-                                        <td><input name="year_weekly_num_posts" type="text" class="inputNumber" value="22"></td>
+                                        <td><input name="q1_weekly_num_posts" type="text" class="inputNumber"
+                                                   value="28"></td>
+                                        <td><input name="q2_weekly_num_posts" type="text" class="inputNumber"
+                                                   value="17"></td>
+                                        <td><input name="q3_weekly_num_posts" type="text" class="inputNumber"
+                                                   value="31"></td>
+                                        <td><input name="q4_weekly_num_posts" type="text" class="inputNumber"
+                                                   value="14"></td>
+                                        <td><input name="year_weekly_num_posts" type="text" class="inputNumber"
+                                                   value="22"></td>
                                     </tr>
                                     <tr>
                                         <td>POINTS OF ENGAGEMENT P/POST</td>
-                                        <td><input name="q1_poe_per_post" type="text" class="inputNumber" value="600"></td>
-                                        <td><input name="q2_poe_per_post" type="text" class="inputNumber" value="1,100"></td>
-                                        <td><input name="q3_poe_per_post" type="text" class="inputNumber" value="1,400"></td>
-                                        <td><input name="q4_poe_per_post" type="text" class="inputNumber" value="1,520"></td>
-                                        <td><input name="year_poe_per_post" type="text" class="inputNumber" value="1,700"></td>
+                                        <td><input name="q1_poe_per_post" type="text" class="inputNumber" value="600">
+                                        </td>
+                                        <td><input name="q2_poe_per_post" type="text" class="inputNumber" value="1,100">
+                                        </td>
+                                        <td><input name="q3_poe_per_post" type="text" class="inputNumber" value="1,400">
+                                        </td>
+                                        <td><input name="q4_poe_per_post" type="text" class="inputNumber" value="1,520">
+                                        </td>
+                                        <td><input name="year_poe_per_post" type="text" class="inputNumber"
+                                                   value="1,700"></td>
                                     </tr>
                                     <tr class="hideIg hideTw">
                                         <td>ENGAGEMENT RATE</td>
-                                        <td><input name="q1_weekly_eng_rate" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="1.37%"></td>
-                                        <td><input name="q2_weekly_eng_rate" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="1.31%"></td>
-                                        <td><input name="q3_weekly_eng_rate" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="1.18%"></td>
-                                        <td><input name="q4_weekly_eng_rate" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="1.47%"></td>
-                                        <td><input name="year_weekly_eng_rate" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="1.42%"></td>
+                                        <td><input name="q1_weekly_eng_rate" type="text" class="inputPercent"
+                                                   data-a-sign="%" data-p-sign="s" value="1.37%"></td>
+                                        <td><input name="q2_weekly_eng_rate" type="text" class="inputPercent"
+                                                   data-a-sign="%" data-p-sign="s" value="1.31%"></td>
+                                        <td><input name="q3_weekly_eng_rate" type="text" class="inputPercent"
+                                                   data-a-sign="%" data-p-sign="s" value="1.18%"></td>
+                                        <td><input name="q4_weekly_eng_rate" type="text" class="inputPercent"
+                                                   data-a-sign="%" data-p-sign="s" value="1.47%"></td>
+                                        <td><input name="year_weekly_eng_rate" type="text" class="inputPercent"
+                                                   data-a-sign="%" data-p-sign="s" value="1.42%"></td>
                                     </tr>
                                     <tr class="hideIg hideTw">
                                         <td>% BASE ACTIVATED</td>
-                                        <td><input name="q1_weekly_base_activated" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="0.8%"></td>
-                                        <td><input name="q2_weekly_base_activated" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="0.8%"></td>
-                                        <td><input name="q3_weekly_base_activated" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="0.7%"></td>
-                                        <td><input name="q4_weekly_base_activated" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="0.7%"></td>
-                                        <td><input name="year_weekly_base_activated" type="text" class="inputPercent" data-a-sign="%" data-p-sign="s" value="0.7%"></td>
+                                        <td><input name="q1_weekly_base_activated" type="text" class="inputPercent"
+                                                   data-a-sign="%" data-p-sign="s" value="0.8%"></td>
+                                        <td><input name="q2_weekly_base_activated" type="text" class="inputPercent"
+                                                   data-a-sign="%" data-p-sign="s" value="0.8%"></td>
+                                        <td><input name="q3_weekly_base_activated" type="text" class="inputPercent"
+                                                   data-a-sign="%" data-p-sign="s" value="0.7%"></td>
+                                        <td><input name="q4_weekly_base_activated" type="text" class="inputPercent"
+                                                   data-a-sign="%" data-p-sign="s" value="0.7%"></td>
+                                        <td><input name="year_weekly_base_activated" type="text" class="inputPercent"
+                                                   data-a-sign="%" data-p-sign="s" value="0.7%"></td>
                                     </tr>
                                     <tr class="hideIg hideTw">
                                         <td>Weekly IMPRESSIONS</td>
-                                        <td><input name="q1_weekly_impressions" type="text" class="inputNumber" value="28,000"></td>
-                                        <td><input name="q2_weekly_impressions" type="text" class="inputNumber" value="19,000"></td>
-                                        <td><input name="q3_weekly_impressions" type="text" class="inputNumber" value="31,000"></td>
-                                        <td><input name="q4_weekly_impressions" type="text" class="inputNumber" value="33,000"></td>
-                                        <td><input name="year_weekly_impressions" type="text" class="inputNumber" value="34,000"></td>
+                                        <td><input name="q1_weekly_impressions" type="text" class="inputNumber"
+                                                   value="28,000"></td>
+                                        <td><input name="q2_weekly_impressions" type="text" class="inputNumber"
+                                                   value="19,000"></td>
+                                        <td><input name="q3_weekly_impressions" type="text" class="inputNumber"
+                                                   value="31,000"></td>
+                                        <td><input name="q4_weekly_impressions" type="text" class="inputNumber"
+                                                   value="33,000"></td>
+                                        <td><input name="year_weekly_impressions" type="text" class="inputNumber"
+                                                   value="34,000"></td>
                                     </tr>
                                     <tr class="hideIg hideTw">
                                         <td>Weekly REACH</td>
-                                        <td><input name="q1_weekly_reach" type="text" class="inputNumber" value="12,000"></td>
-                                        <td><input name="q2_weekly_reach" type="text" class="inputNumber" value="11,375"></td>
-                                        <td><input name="q3_weekly_reach" type="text" class="inputNumber" value="14,091"></td>
-                                        <td><input name="q4_weekly_reach" type="text" class="inputNumber" value="15,445"></td>
-                                        <td><input name="year_weekly_reach" type="text" class="inputNumber" value="16,000"></td>
+                                        <td><input name="q1_weekly_reach" type="text" class="inputNumber"
+                                                   value="12,000"></td>
+                                        <td><input name="q2_weekly_reach" type="text" class="inputNumber"
+                                                   value="11,375"></td>
+                                        <td><input name="q3_weekly_reach" type="text" class="inputNumber"
+                                                   value="14,091"></td>
+                                        <td><input name="q4_weekly_reach" type="text" class="inputNumber"
+                                                   value="15,445"></td>
+                                        <td><input name="year_weekly_reach" type="text" class="inputNumber"
+                                                   value="16,000"></td>
                                     </tr>
                                     <tr class="hideFb">
                                         <td>ONE TO ONE ENGAGEMENT</td>
-                                        <td><input name="q1_one_to_one_eng" type="text" class="inputNumber" value="0"></td>
-                                        <td><input name="q2_one_to_one_eng" type="text" class="inputNumber" value="0"></td>
-                                        <td><input name="q3_one_to_one_eng" type="text" class="inputNumber" value="0"></td>
-                                        <td><input name="q4_one_to_one_eng" type="text" class="inputNumber" value="0"></td>
-                                        <td><input name="year_one_to_one_eng" type="text" class="inputNumber" value="0"></td>
+                                        <td><input name="q1_one_to_one_eng" type="text" class="inputNumber" value="0">
+                                        </td>
+                                        <td><input name="q2_one_to_one_eng" type="text" class="inputNumber" value="0">
+                                        </td>
+                                        <td><input name="q3_one_to_one_eng" type="text" class="inputNumber" value="0">
+                                        </td>
+                                        <td><input name="q4_one_to_one_eng" type="text" class="inputNumber" value="0">
+                                        </td>
+                                        <td><input name="year_one_to_one_eng" type="text" class="inputNumber" value="0">
+                                        </td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -477,6 +550,7 @@
                         </div>
                     </div>
                     <br>
+
                     <div class="col-sm-offset-8 col-sm-4 col-xs-offset-6 col-xs-6 btnGoals">
                         <button class="btn btn-red" id="discard_changes">DISCARD CHANGES</button>
                         <button class="btn btn-red" id="save_goals">SAVE CHANGES</button>
@@ -490,6 +564,7 @@
                 <div class="clearfix beigePanel panelHead selAnalytics">
 
                     <i class="fa fa-facebook-square selectModI"></i>
+
                     <div class="selectModP">
                         <select class="selectMod" id="selectModA">
                             <option value="fa-facebook-square">Facebook analytics</option>
@@ -501,365 +576,556 @@
                         SELECT FROM THE DROP-DOWN MENU TO VIEW PLATFORM-SPECIFIC ANALYTICS
                     </span>-->
                     <span class="infoIcons">
-                        <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                        <i class="fa fa-minus-circle minimizeIt" title="Collapse analytics window" value="analyticsContainer"></i>
+                        <i class="fa fa-info-circle se" title="Click on icon of the platform you wish to review"></i> &nbsp;
+                        <i class="fa fa-minus-circle minimizeIt" title="Collapse analytics window"
+                           value="analyticsContainer"></i>
                     </span>
                 </div>
             </div>
         </div>
         <div class="row marBotS" id="analyticsContainer">
-        <div class="col-sm-12">
-
-        <div class="row">
             <div class="col-sm-12">
-                <div class="clearfix beigePanelCut head">
-                    <div class="inlineBlock">Growth </div>
-                    <div id="growthSmPie" class="smallPie"></div>
-                    <div class="smallPieDesc">
-                        <b class="marRightS"><div id="smPieGrowth"></div>%</b>
-                        <div id="smPieGrowthA"></div> / <div id="smPieGrowthB" class="marRightS"></div> Followers this quarter
-                    </div>
-                    <span class="infoIcons">
-                        <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                        <i class="fa fa-minus-circle minimizeIt" title="Collapse growth window" value="growthContainer"></i>
-                    </span>
-                </div>
-            </div>
-        </div>
 
-        <div class="row" id="growthContainer">
-            <div class="col-sm-12">
-                <div class="clearfix beigePanel">
-                    <div class="col-md-8 noPad">
-                        <div class="col-sm-4">
-                            <div class="vertContent">
-                                <img src="images/icon_followers.png" class="followersIcon">
-                                <div id="followersQuant"></div>
-                                <div class="foll">followers</div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanelCut head">
+                            <div class="inlineBlock">Growth</div>
+                            <div id="growthSmPie" class="smallPie"></div>
+                            <div class="smallPieDesc">
+                                <b class="marRightS">
+                                    <div id="smPieGrowth"></div>
+                                    %</b>
+
+                                <div id="smPieGrowthA"></div>
+                                /
+                                <div id="smPieGrowthB" class="marRightS"></div>
+                                Followers this quarter
                             </div>
+                    <span class="infoIcons">
+                        <i class="fa fa-info-circle se"
+                           title="Growth metrics in this section display total network size (far left panel), growth rate across the period (center), the net number of followers added/lost (center-right), and visualization of the daily/weekly/monthly growth for the prescribed time period. Metrics are an aggregate of accounts within the Domestic or International initiative. "></i> &nbsp;
+                        <i class="fa fa-minus-circle minimizeIt" title="Collapse growth window"
+                           value="growthContainer"></i>
+                    </span>
                         </div>
-                        <div class="col-sm-8 bordRightDot bordLeftDot bordDiss noPad">
-                            <div class="changeStatus">
-                                <div class="changeStatusPlus">
-                                    <img src="images/arrow_up.png">
-                                    <div id="followersChartS" class="inlineD"></div>
-                                    <div class="newFollowText"><i class="fa fa-caret-up"></i> New followers</div>
+                    </div>
+                </div>
+
+                <div class="row" id="growthContainer">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanel">
+                            <div class="col-md-8 noPad">
+                                <div class="col-sm-4">
+                                    <div class="vertContent">
+                                        <img src="images/icon_followers.png" class="followersIcon">
+
+                                        <div id="followersQuant"></div>
+                                        <div class="foll">followers</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 bordRightDot bordLeftDot bordDiss noPad">
+                                    <div class="changeStatus">
+                                        <div class="changeStatusPlus">
+                                            <img src="images/arrow_up.png">
+
+                                            <div id="followersChartS" class="inlineD"></div>
+                                            <div class="newFollowText"><i class="fa fa-caret-up"></i> New followers
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 noPad">
+                                <div class="col-sm-12">
+                                    <div class="text-center chartHead">Follower growth by day</div>
+                                    <div id="newGrowthChart" class="minTop"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 noPad">
-                        <div class="col-sm-12">
-                            <div class="text-center chartHead">Follower growth by day</div>
-                            <div id="newGrowthChart" class="minTop"></div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="clearfix beigePanelCut bordTop head">
-                    <div class="inlineBlock">Number of posts </div>
-                    <div id="postsSmPie" class="smallPie"></div>
-                    <div class="smallPieDesc">
-                        <b class="marRightS"><div id="smPiePosts"></div>%</b>
-                        <div id="smPiePostsA"></div> / <div id="smPiePostsB" class="marRightS"></div> Total posts
-                    </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanelCut bordTop head">
+                            <div class="inlineBlock">Number of posts</div>
+                            <div id="postsSmPie" class="smallPie"></div>
+                            <div class="smallPieDesc">
+                                <b class="marRightS">
+                                    <div id="smPiePosts"></div>
+                                    %</b>
+
+                                <div id="smPiePostsA"></div>
+                                /
+                                <div id="smPiePostsB" class="marRightS"></div>
+                                Total posts
+                            </div>
                     <span class="infoIcons">
                         <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                        <i class="fa fa-minus-circle minimizeIt" title="Collapse posts window" value="postsContainer"></i>
+                        <i class="fa fa-minus-circle minimizeIt" title="Collapse posts window"
+                           value="postsContainer"></i>
                     </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="postsContainer">
-            <div class="col-sm-12">
-                <div class="clearfix beigePanel">
-                    <div class="col-sm-4 col-xs-12">
-                        <div class="clearfix bordAr">
-                        <div class="inClear">
-                            <div class="hugeText" id="postsNumber"></div> <div class="hugeTextB">Posts in <br>selected timeframe</div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-12">
-                        <div class="clearfix bordAr">
-                            <div class="hugeText" id="avgPostsPerWeek"></div> <div class="hugeTextB">Average posts <br>per week</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-12">
-                        <div class="clearfix bordAr">
-                            <div class="hugeText" id="postsPerQuarter"></div> <div class="hugeTextB">Posts so far <br>this quarter</div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="clearfix beigePanelCut head bordTop">
-                    <div class="inlineBlock">Engagement </div>
-                    <div id="engagementSmPie" class="smallPie"></div>
-                    <div class="smallPieDesc">
-                        <b class="marRightS"><div id="smPieEngagement"></div>%</b>
-                        <div id="smPieEngagementA"></div> / <div id="smPieEngagementB" class="marRightS"></div> Points of engagement per post
-                    </div>
-                    <span class="infoIcons">
-                        <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                        <i class="fa fa-minus-circle minimizeIt" title="Collapse engagement window" value="engagementContainer"></i>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="engagementContainer">
-            <div class="col-sm-12">
-                <div class="clearfix beigePanel">
-                    <div class="col-md-5">
-                        <div class="clearfix engageCont">
-                        <div class="col-sm-4 bordRightDot">
-                            Engaged users <br><br>
-                            <div id="engUsersVal"></div>
-                            <div class="changeValues">
-                                <i class="fa fa-angle-up"></i> <span id="engUsersPer"></span> &nbsp;
-                            </div>
-                        </div>
-                        <div class="col-sm-4 bordRightDot">
-                            % base activated <br><br>
-                            <div id="baseActivVal"></div>
-                            <div class="changeValues">
-                                <i class="fa fa-angle-up"></i> <span id="baseActivPer"></span> &nbsp;
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            Engagement rate <br><br>
-                            <div id="engRateVal"></div>
-                            <div class="changeValues">
-                                <i class="fa fa-angle-up"></i> <span id="engRatePer"></span> &nbsp;
-                            </div>
-                        </div>
-                        <div class="col-sm-12 topBoldBord">
-                            Average engagement per post <br><br>
-                            <div id="engAverVal"></div>
-                            <div class="changeValues">
-                                <i class="fa fa-angle-up"></i> <span id="engAverPer"></span> &nbsp;
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="text-center chartHead marBot">Post engagement by day</div>
-                        <div id="engagementChart"></div>
-                        <div class="text-center smaller marTop">Rollover each bar for values</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="clearfix beigePanelCut bordTop head">
-                    <div class="inlineBlock">Reach and impressions </div>
-                    <div id="reachSmPie" class="smallPie"></div>
-                    <div class="smallPieDesc">
-                        <b class="marRightS"><div id="smPieReach"></div>%</b>
-                        <div id="smPieReachA"></div> / <div id="smPieReachB" class="marRightS"></div> Average weekly impressions
-                    </div>
-                    <span class="infoIcons">
-                        <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                        <i class="fa fa-minus-circle minimizeIt" title="Collapse reach window" value="reachContainer"></i>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="reachContainer">
-            <div class="col-sm-12">
-                <div class="clearfix beigePanel">
-                    <div class="col-md-5">
-                        <div class="clearfix">
-                        <div class="col-sm-6 noPad">
-                            <br><br><br><br>
-                            <div class="changeStatusS">
-                                <div class="changeStatusPlusS">
-                                    <span id="impressChangeQ"></span>
-                                    <div class="newFollowText minusValA"><i class="fa fa-caret-up"></i> Reach</div>
-                                    <div id="impressChartS" class="inlineD minusVal"></div>
-                                    <img src="images/arrow_down_s.png" class="minusValA">
+                <div class="row" id="postsContainer">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanel">
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="clearfix bordAr">
+                                    <div class="inClear">
+                                        <div class="hugeText" id="postsNumber"></div>
+                                        <div class="hugeTextB">Posts in <br>selected timeframe</div>
+                                    </div>
                                 </div>
                             </div>
-                            <br>
-                        </div>
-                        <div class="col-sm-6 bordRightDot bordDiss noPad">
-                            <br><br><br><br>
-                            <div class="changeStatusS">
-                                <div class="changeStatusPlusS">
-                                    <img src="images/arrow_up_s.png">
-                                    <div id="reachChartS" class="inlineD"></div>
-                                    <span id="reachChangeQ"></span>
-                                    <div class="newFollowText"><i class="fa fa-caret-up"></i> Impressions</div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="clearfix bordAr">
+                                    <div class="hugeText" id="avgPostsPerWeek"></div>
+                                    <div class="hugeTextB">Average posts <br>per week</div>
                                 </div>
                             </div>
-                            <br>
-                        </div>
-                            <div class="text-center">Change in reach & impressions from last week</div>
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="text-center chartHead marBot">Reach and impressions by day</div>
-                        <div id="paidChart"></div>
-                        <div class="text-center smaller marTop">Rollover each bar for values</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-<!--        <div class="row">
-            <div class="col-sm-12">
-                <div class="clearfix beigePanelCut bordTop head">
-                    One-to-one engagement
-                    <span class="infoIcons">
-                        <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                        <i class="fa fa-minus-circle minimizeIt" title="Collapse advocates window" value="advocatesContainer"></i>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="advocatesContainer">
-            <div class="col-sm-12">
-                <div class="clearfix beigePanel">
-                    <div class="col-md-5">
-                        <div class="clearfix">
-                        <div class="col-sm-12 bordRightDot noPad">
-                            <br>
-                            <div class="changeStatus">
-                                <div class="changeStatusPlus">
-                                    <img src="images/arrow_up.png">
-                                    <div id="advocatesChartS" class="inlineD"></div>
-                                    <span id="advocatesChange"></span>
-                                    <div class="newFollowText"><i class="fa fa-caret-up"></i> 1-1 Engagements</div>
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="clearfix bordAr">
+                                    <div class="hugeText" id="postsPerQuarter"></div>
+                                    <div class="hugeTextB">Posts so far <br>this quarter</div>
                                 </div>
                             </div>
-                            <br>
                         </div>
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="text-center chartHead marBot">Engagements by day</div>
-                        <div id="commentsChart"></div>
-                        <div class="text-center smaller marTop">Rollover each bar for values</div>
                     </div>
                 </div>
-            </div>
-        </div>-->
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="clearfix beigePanelCut bordTop head">
-                    Content Labels
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanelCut head bordTop">
+                            <div class="inlineBlock">Engagement</div>
+                            <div id="engagementSmPie" class="smallPie"></div>
+                            <div class="smallPieDesc">
+                                <b class="marRightS">
+                                    <div id="smPieEngagement"></div>
+                                    %</b>
+
+                                <div id="smPieEngagementA"></div>
+                                /
+                                <div id="smPieEngagementB" class="marRightS"></div>
+                                Points of engagement per post
+                            </div>
                     <span class="infoIcons">
-                        <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                        <i class="fa fa-minus-circle minimizeIt" title="Collapse labels window" value="labelsContainer"></i>
+                        <i class="fa fa-info-circle se"
+                           title="Engagement metrics in this section display Average Engagement per Post (calculated by Total Engagement vs. Total Posts), % Base Activated (A per message average calculated by Engaged Users vs. Total Fans), Engaged Users (an aggregate of the Engaged Users as recorded by Facebook insights) and Engagement Rate (pulled directly from Facebook insights; total engagement by total unique impressions). All % increase/decreases in metrics are compared to the previous time period as prescribed. Metrics are an aggregate of accounts within the Domestic or International initiative. "></i> &nbsp;
+                        <i class="fa fa-minus-circle minimizeIt" title="Collapse engagement window"
+                           value="engagementContainer"></i>
                     </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" id="labelsContainer">
-            <div class="col-sm-12">
-                <div class="clearfix beigePanel botRad">
-                    <div class="col-md-offset-1 col-md-10">
-                        <div class="small2">Create <b>up to 12</b> groups of content labels to plot on the graph</div>
-                        <div class="row">
-                            <br>
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelA">
-                                    <option>Spredfast</option><option>Spredfast</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelB">
-                                    <option>Facebook</option><option>Spredfast</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelC">
-                                    <option>Summit</option><option>Spredfast</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelD">
-                                    <option>Marketing</option><option>Spredfast</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelE">
-                                    <option>Spredfast</option><option>SXSW</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelF">
-                                    <option>Austin</option><option>Spredfast</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelG">
-                                    <option>Trendology</option><option>Spredfast</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelH">
-                                    <option>Twitter</option><option>Spredfast</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelI">
-                                    <option>Photo</option><option>Spredfast</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelJ">
-                                    <option>Instagram</option><option>Spredfast</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelK">
-                                    <option>ATX</option><option>Spredfast</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-2">
-                                <select class="form-control labelSelL">
-                                    <option>Socialfirst</option><option>Spredfast</option><option>SXSW</option><option>Marketing</option><option>Summit</option><option>Austin</option><option>Trendology</option><option>Twitter</option><option>Photo</option><option>Photo</option><option>Instagram</option><option>ATX</option>
-                                </select>
-                            </div>
-                        </div>
-
-                            <div id="labelsChart"></div>
-                        <br>
-                        <div class="text-center chartHead marBot">Total engagement</div>
-                        <div class="small2 text-center">Size of dot displays average engagement for content group</div>
-                        <br>
                     </div>
                 </div>
+
+                <div class="row" id="engagementContainer">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanel">
+                            <div class="col-md-5">
+                                <div class="clearfix engageCont">
+                                    <div class="col-sm-4 bordRightDot">
+                                        Engaged users <br><br>
+
+                                        <div id="engUsersVal"></div>
+                                        <div class="changeValues">
+                                            <i class="fa fa-angle-up"></i> <span id="engUsersPer"></span> &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 bordRightDot">
+                                        % base activated <br><br>
+
+                                        <div id="baseActivVal"></div>
+                                        <div class="changeValues">
+                                            <i class="fa fa-angle-up"></i> <span id="baseActivPer"></span> &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        Engagement rate <br><br>
+
+                                        <div id="engRateVal"></div>
+                                        <div class="changeValues">
+                                            <i class="fa fa-angle-up"></i> <span id="engRatePer"></span> &nbsp;
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 topBoldBord">
+                                        Average engagement per post <br><br>
+
+                                        <div id="engAverVal"></div>
+                                        <div class="changeValues">
+                                            <i class="fa fa-angle-up"></i> <span id="engAverPer"></span> &nbsp;
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="text-center chartHead marBot">Post engagement by day</div>
+                                <div id="engagementChart"></div>
+                                <div class="text-center smaller marTop">Rollover each bar for values</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanelCut bordTop head">
+                            <div class="inlineBlock">Reach and impressions</div>
+                            <div id="reachSmPie" class="smallPie"></div>
+                            <div class="smallPieDesc">
+                                <b class="marRightS">
+                                    <div id="smPieReach"></div>
+                                    %</b>
+
+                                <div id="smPieReachA"></div>
+                                /
+                                <div id="smPieReachB" class="marRightS"></div>
+                                Average weekly impressions
+                            </div>
+                    <span class="infoIcons">
+                        <i class="fa fa-info-circle se"
+                           title="Reach & Impression metrics in this section display aggregate Reach and Total Impressions across the prescribed time period. Total Impressions (far left) is taken directly from Facebook Insights. Total Reach is an aggregate of Reach for the prescribed time period also taken from Facebook Insights. Metrics are an aggregate of accounts within the Domestic or International initiative."></i> &nbsp;
+                        <i class="fa fa-minus-circle minimizeIt" title="Collapse reach window"
+                           value="reachContainer"></i>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="reachContainer">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanel">
+                            <div class="col-md-5">
+                                <div class="clearfix">
+                                    <div class="col-sm-6 noPad">
+                                        <br><br><br><br>
+
+                                        <div class="changeStatusS">
+                                            <div class="changeStatusPlusS">
+                                                <span id="impressChangeQ"></span>
+
+                                                <div class="newFollowText minusValA"><i class="fa fa-caret-up"></i>
+                                                    Reach
+                                                </div>
+                                                <div id="impressChartS" class="inlineD minusVal"></div>
+                                                <img src="images/arrow_down_s.png" class="minusValA">
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <div class="col-sm-6 bordRightDot bordDiss noPad">
+                                        <br><br><br><br>
+
+                                        <div class="changeStatusS">
+                                            <div class="changeStatusPlusS">
+                                                <img src="images/arrow_up_s.png">
+
+                                                <div id="reachChartS" class="inlineD"></div>
+                                                <span id="reachChangeQ"></span>
+
+                                                <div class="newFollowText"><i class="fa fa-caret-up"></i> Impressions
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <div class="text-center">Change in reach & impressions from last week</div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="text-center chartHead marBot">Reach and impressions by day</div>
+                                <div id="paidChart"></div>
+                                <div class="text-center smaller marTop">Rollover each bar for values</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-12">-->
+                        <!--<div class="clearfix beigePanelCut bordTop head">-->
+                            <!--One-to-one engagement-->
+                                    <!--<span class="infoIcons">-->
+                                        <!--<i class="fa fa-info-circle se" title="info"></i> &nbsp;-->
+                                        <!--<i class="fa fa-minus-circle minimizeIt" title="Collapse advocates window"-->
+                                           <!--value="advocatesContainer"></i>-->
+                                    <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="row" id="advocatesContainer">-->
+                    <!--<div class="col-sm-12">-->
+                        <!--<div class="clearfix beigePanel">-->
+                            <!--<div class="col-md-5">-->
+                                <!--<div class="clearfix">-->
+                                    <!--<div class="col-sm-12 bordRightDot noPad">-->
+                                        <!--<br>-->
+
+                                        <!--<div class="changeStatus">-->
+                                            <!--<div class="changeStatusPlus">-->
+                                                <!--<img src="images/arrow_up.png">-->
+
+                                                <!--<div id="advocatesChartS" class="inlineD"></div>-->
+                                                <!--<span id="advocatesChange"></span>-->
+
+                                                <!--<div class="newFollowText"><i class="fa fa-caret-up"></i> 1-1-->
+                                                    <!--Engagements-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<br>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="col-md-7">-->
+                                <!--<div class="text-center chartHead marBot">Engagements by day</div>-->
+                                <!--<div id="commentsChart"></div>-->
+                                <!--<div class="text-center smaller marTop">Rollover each bar for values</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanelCut bordTop head">
+                            Content Labels
+                    <span class="infoIcons">
+                        <i class="fa fa-info-circle se" title="The Content Label section allows users to assess the average engagement of up to (6) combinations of labels during the prescribed time period. Each drop down menu includes all potential content labels from which the user may choose as many as they wish. Each drop down menu corresponds to one bubble/data point on the scatterplot representing the total activity and engagement for content with the prescribed content labels. Metrics are an aggregate of accounts within the Domestic or International initiative."></i> &nbsp;
+                        <i class="fa fa-minus-circle minimizeIt" title="Collapse labels window"
+                           value="labelsContainer"></i>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="labelsContainer">
+                    <div class="col-sm-12">
+                        <div class="clearfix beigePanel botRad">
+                            <div class="col-md-offset-1 col-md-10" id="labelsSelects">
+                                <div class="small2">Create <b>up to 12</b> groups of content labels to plot on the graph
+                                </div>
+                                <div class="row">
+                                    <br>
+
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelA multiselect_0">
+                                            <option>Spredfast</option>
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelB multiselect_1">
+                                            <option>Facebook</option>
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelC multiselect_2">
+                                            <option>Summit</option>
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelD multiselect_3">
+                                            <option>Marketing</option>
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelE multiselect_4">
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelF multiselect_5">
+                                            <option>Austin</option>
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelG multiselect_6">
+                                            <option>Trendology</option>
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelH multiselect_7">
+                                            <option>Twitter</option>
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelI multiselect_8">
+                                            <option>Photo</option>
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelJ multiselect_9">
+                                            <option>Instagram</option>
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelK multiselect_10">
+                                            <option>ATX</option>
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <select class="form-control labelSelL multiselect_11">
+                                            <option>Socialfirst</option>
+                                            <option>Spredfast</option>
+                                            <option>SXSW</option>
+                                            <option>Marketing</option>
+                                            <option>Summit</option>
+                                            <option>Austin</option>
+                                            <option>Trendology</option>
+                                            <option>Twitter</option>
+                                            <option>Photo</option>
+                                            <option>Photo</option>
+                                            <option>Instagram</option>
+                                            <option>ATX</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div id="labelsChart"></div>
+                                <br>
+
+                                <div class="text-center chartHead marBot">Total engagement</div>
+                                <div class="small2 text-center">Size of dot displays average engagement for content
+                                    group
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
-
-
-        </div>
-        </div>
-
 
 
         <div class="row">
@@ -867,8 +1133,9 @@
                 <div class="clearfix beigePanel panelHead">
                     <div class="head2">Top Performing Content</div>
                     <span class="infoIcons">
-                        <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                        <i class="fa fa-minus-circle minimizeIt" title="Collapse performingContent window" value="performingContentContainer"></i>
+                        <i class="fa fa-info-circle se" title="The Top Performing Content section displays the 3 pieces of content on the platform receiving the highest total engagement for the prescribed time period. "></i> &nbsp;
+                        <i class="fa fa-minus-circle minimizeIt" title="Collapse performingContent window"
+                           value="performingContentContainer"></i>
                     </span>
                 </div>
             </div>
@@ -882,15 +1149,27 @@
                             <i class="fa fa-facebook-square"></i>
                         </div>
                         <div class="picBlock padL">
-                            <img src="images/spredfast-facebook-1.png"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-facebook-1.png"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             01
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-facebook-2.png"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-facebook-2.png"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             02
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-facebook-3.png"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-facebook-3.png"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             03
                         </div>
                     </div>
@@ -899,15 +1178,27 @@
                             <i class="fa fa-twitter"></i>
                         </div>
                         <div class="picBlock padL">
-                            <img src="images/spredfast-twitter-1.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-twitter-1.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             01
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-twitter-2.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-twitter-2.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             02
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-twitter-3.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-twitter-3.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             03
                         </div>
                     </div>
@@ -916,15 +1207,27 @@
                             <i class="fa fa-instagram"></i>
                         </div>
                         <div class="picBlock padL">
-                            <img src="images/spredfast-instagram-1.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-instagram-1.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             01
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-instagram-2.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-instagram-2.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             02
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-instagram-3.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-instagram-3.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             03
                         </div>
                     </div>
@@ -938,8 +1241,9 @@
                 <div class="clearfix beigePanel panelHead">
                     <div class="head2">Lowest Performing Content</div>
                     <span class="infoIcons">
-                        <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                        <i class="fa fa-minus-circle minimizeIt" title="Collapse performingContent window" value="lowestContentContainer"></i>
+                        <i class="fa fa-info-circle se" title="The Low Performing Content section displays the 3 pieces of content on the platform receiving the lowest total engagement for the prescribed time period. "></i> &nbsp;
+                        <i class="fa fa-minus-circle minimizeIt" title="Collapse lowestContent window"
+                           value="lowestContentContainer"></i>
                     </span>
                 </div>
             </div>
@@ -953,15 +1257,27 @@
                             <i class="fa fa-facebook-square"></i>
                         </div>
                         <div class="picBlock padL">
-                            <img src="images/spredfast-facebook-4.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-facebook-4.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             01
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-facebook-5.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-facebook-5.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             02
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-facebook-6.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-facebook-6.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             03
                         </div>
                     </div>
@@ -970,15 +1286,27 @@
                             <i class="fa fa-twitter"></i>
                         </div>
                         <div class="picBlock padL">
-                            <img src="images/spredfast-twitter-4.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-twitter-4.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             01
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-twitter-5.png"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-twitter-5.png"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             02
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-twitter-6.png"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-twitter-6.png"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             03
                         </div>
                     </div>
@@ -987,15 +1315,27 @@
                             <i class="fa fa-instagram"></i>
                         </div>
                         <div class="picBlock padL">
-                            <img src="images/spredfast-instagram-4.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-instagram-4.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             01
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-instagram-5.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-instagram-5.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             02
                         </div>
                         <div class="picBlock">
-                            <img src="images/spredfast-instagram-6.jpg"><br>
+                            <a href="javascript:void(0);">
+                                <img class="need-title" src="images/spredfast-instagram-6.jpg"
+                                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+                            </a>
+                            <br>
                             03
                         </div>
                     </div>
@@ -1009,8 +1349,9 @@
                 <div class="clearfix beigePanel panelHead head">
                     <div class="head2">Social channel referrals</div>
             <span class="infoIcons">
-                <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                <i class="fa fa-minus-circle minimizeIt" title="Collapse advocates window" value="referralsContainer"></i>
+                <i class="fa fa-info-circle se" title="The Competitive Data section displays a count and visualization corresponding to the number of mentions logged by the company of note during the prescribed time period."></i> &nbsp;
+                <i class="fa fa-minus-circle minimizeIt" title="Collapse advocates window"
+                   value="referralsContainer"></i>
             </span>
                 </div>
             </div>
@@ -1022,6 +1363,7 @@
                     <div class="col-lg-5 col-md-6 col-sm-12 bordRightDot noPad">
                         <div class="clearfix">
                             <br><br>
+
                             <div id="totRefferalsChart" class="donArea"></div>
                             <div class="donChartCont">
                                 <div class="insideDonAr">
@@ -1034,7 +1376,9 @@
                     </div>
                     <div class="col-lg-7 col-md-6 col-sm-12">
                         <div class="chartTitle">Social referrals by day</div>
-                        <div class="chartDesc"><img src="http://abercrombie.dev/images/axis_line_green.png"> Total site traffic &nbsp; <img src="http://abercrombie.dev/images/axis_line_grey.png"> Social referrals </div>
+                        <div class="chartDesc"><img src="http://abercrombie.dev/images/axis_line_green.png"> Total site
+                            traffic &nbsp; <img src="http://abercrombie.dev/images/axis_line_grey.png"> Social referrals
+                        </div>
                         <div id="socRefChart"></div>
                         <div class="text-center smaller marTop upperCase">Roll over each bar for values</div>
                     </div>
@@ -1047,8 +1391,9 @@
                 <div class="clearfix beigePanel panelHead">
                     <div class="head2">Competitive data</div>
                     <span class="infoIcons">
-                        <i class="fa fa-info-circle se" title="info"></i> &nbsp;
-                        <i class="fa fa-minus-circle minimizeIt" title="Collapse competitive window" value="competitiveContainer"></i>
+                        <i class="fa fa-info-circle se" title="The Competitive Data section displays a count and visualization corresponding to the number of mentions logged by the company of note during the prescribed time period."></i> &nbsp;
+                        <i class="fa fa-minus-circle minimizeIt" title="Collapse competitive window"
+                           value="competitiveContainer"></i>
                     </span>
                 </div>
             </div>
@@ -1058,6 +1403,7 @@
             <div class="col-sm-12">
                 <div class="clearfix beigePanel panelBody">
                     <br>
+
                     <div class="row competData">
                         <div class="col-sm-7">
                             <div class="col-sm-4">
@@ -1065,35 +1411,40 @@
                             </div>
                             <div class="col-sm-8">
                                 <div id="brandAVal"></div>
-                                <div class="upper">mentions</div> <i class="fa fa-twitter"></i>
+                                <div class="upper">mentions</div>
+                                <i class="fa fa-twitter"></i>
                             </div>
                             <div class="col-sm-4">
                                 <div id="brandB" class="brandName rightF"></div>
                             </div>
                             <div class="col-sm-8">
                                 <div id="brandBVal"></div>
-                                <div class="upper">mentions</div> <i class="fa fa-twitter"></i>
+                                <div class="upper">mentions</div>
+                                <i class="fa fa-twitter"></i>
                             </div>
                             <div class="col-sm-4">
                                 <div id="brandC" class="brandName rightF"></div>
                             </div>
                             <div class="col-sm-8">
                                 <div id="brandCVal"></div>
-                                <div class="upper">mentions</div> <i class="fa fa-twitter"></i>
+                                <div class="upper">mentions</div>
+                                <i class="fa fa-twitter"></i>
                             </div>
                             <div class="col-sm-4">
                                 <div id="brandD" class="brandName rightF"></div>
                             </div>
                             <div class="col-sm-8">
                                 <div id="brandDVal"></div>
-                                <div class="upper">mentions</div> <i class="fa fa-twitter"></i>
+                                <div class="upper">mentions</div>
+                                <i class="fa fa-twitter"></i>
                             </div>
                             <div class="col-sm-4">
                                 <div id="brandE" class="brandName rightF"></div>
                             </div>
                             <div class="col-sm-8">
                                 <div id="brandEVal"></div>
-                                <div class="upper">mentions</div> <i class="fa fa-twitter"></i>
+                                <div class="upper">mentions</div>
+                                <i class="fa fa-twitter"></i>
                             </div>
                         </div>
                         <div class="col-sm-5">
@@ -1101,11 +1452,14 @@
                                 <div class="aberBack">
                                     <div id="brandF"></div>
                                     <div id="brandFVal"></div>
-                                    <div class="upper">mentions</div> <i class="fa fa-twitter"></i>
+                                    <div class="upper">mentions</div>
+                                    <i class="fa fa-twitter"></i>
                                     <br>
+
                                     <div id="brandG"></div>
                                     <div id="brandGVal"></div>
-                                    <div class="upper">mentions</div> <i class="fa fa-twitter"></i>
+                                    <div class="upper">mentions</div>
+                                    <i class="fa fa-twitter"></i>
                                 </div>
                             </div>
                         </div>
@@ -1113,9 +1467,6 @@
                 </div>
             </div>
         </div>
-
-
-
 
 
     </section>
@@ -1130,8 +1481,8 @@
 
 
 <script src="js/hub.js"></script>
-<!--<script src="js/config.js"></script>-->
-<!--<script src="js/app.js"></script>-->
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
 
 
 </body>

@@ -831,13 +831,18 @@ $(document).ready(function () {
         }
 
         $(".fa-info-circle, .fa-minus-circle").kendoTooltip({
-            width: 120,
+            width: 320,
             position: "left"
         }).data("kendoTooltip");
 
         $(".square").kendoTooltip({
             width: 90,
             position: "top"
+        }).data("kendoTooltip");
+
+        $(".need-title").kendoTooltip({
+            width: 110,
+            position: "bottom"
         }).data("kendoTooltip");
 
         //Change platform analytics
@@ -1867,7 +1872,6 @@ $(document).ready(function () {
         //Insert change values
         data.ch.totalRef = data.ch.totalRef.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         $("#totalRef").text(data.ch.totalRef);
-        console.log(data.ch.totalRef);
         createTotRefferalsChart();
         $(document).bind("kendo:skinChange", createTotRefferalsChart);
 
@@ -1963,6 +1967,50 @@ $(document).ready(function () {
 //                $( "#selectModG" ).val( $( this ).val() );
         });
     }).change();
+
+
+    //Sample data for goals
+    //var goalsCurrYear = 2014;
+    //data.goalsObj = [
+    //    {
+    //        q1_growth: 8600000,
+    //        q1_poe_per_post: 2600,
+    //        q1_weekly_base_activated: "0.80",
+    //        q1_weekly_eng_rate: "1.37",
+    //        q1_weekly_impressions: 28000000,
+    //        q1_weekly_num_posts: 28,
+    //        q1_weekly_reach: 12700000,
+    //        q2_growth: 8860000,
+    //        q2_poe_per_post: 2600,
+    //        q2_weekly_base_activated: "0.80",
+    //        q2_weekly_eng_rate: "1.33",
+    //        q2_weekly_impressions: 28000000,
+    //        q2_weekly_num_posts: 28,
+    //        q2_weekly_reach: 12727273,
+    //        q3_growth: 10100000,
+    //        q3_poe_per_post: 2600,
+    //        q3_weekly_base_activated: "0.70",
+    //        q3_weekly_eng_rate: "1.18",
+    //        q3_weekly_impressions: 31920000,
+    //        q3_weekly_num_posts: 28,
+    //        q3_weekly_reach: 14509091,
+    //        q4_growth: 10500000,
+    //        q4_poe_per_post: 3000,
+    //        q4_weekly_base_activated: "0.70",
+    //        q4_weekly_eng_rate: "1.42",
+    //        q4_weekly_impressions: 33196800,
+    //        q4_weekly_num_posts: 28,
+    //        q4_weekly_reach: 15089455,
+    //        year: 2014,
+    //        year_growth: 10500000,
+    //        year_poe_per_post: 3000,
+    //        year_weekly_base_activated: "0.74",
+    //        year_weekly_eng_rate: "1.42",
+    //        year_weekly_impressions: 34524672,
+    //        year_weekly_num_posts: 28,
+    //        year_weekly_reach: 15693033
+    //    }
+    //];
 
 
 });
