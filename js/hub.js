@@ -1022,6 +1022,11 @@ $(document).ready(function () {
 
         }
 
+        function _getEndDateYear() {
+            d = new Date($("input[name=filterDate]").val().replace(/ /g, ''));
+            return d.getFullYear();
+        }
+
         function _formatDateToSql(value) {
             d = new Date(value);
             curr_date = d.getDate();
@@ -2073,49 +2078,261 @@ $(document).ready(function () {
     }
 
     //Sample data for goals
-    //var goalsCurrYear = 2014;
-    //data.goalsObj = [
-    //    {
-    //        q1_growth: 8600000,
-    //        q1_poe_per_post: 2600,
-    //        q1_weekly_base_activated: "0.80",
-    //        q1_weekly_eng_rate: "1.37",
-    //        q1_weekly_impressions: 28000000,
-    //        q1_weekly_num_posts: 28,
-    //        q1_weekly_reach: 12700000,
-    //        q2_growth: 8860000,
-    //        q2_poe_per_post: 2600,
-    //        q2_weekly_base_activated: "0.80",
-    //        q2_weekly_eng_rate: "1.33",
-    //        q2_weekly_impressions: 28000000,
-    //        q2_weekly_num_posts: 28,
-    //        q2_weekly_reach: 12727273,
-    //        q3_growth: 10100000,
-    //        q3_poe_per_post: 2600,
-    //        q3_weekly_base_activated: "0.70",
-    //        q3_weekly_eng_rate: "1.18",
-    //        q3_weekly_impressions: 31920000,
-    //        q3_weekly_num_posts: 28,
-    //        q3_weekly_reach: 14509091,
-    //        q4_growth: 10500000,
-    //        q4_poe_per_post: 3000,
-    //        q4_weekly_base_activated: "0.70",
-    //        q4_weekly_eng_rate: "1.42",
-    //        q4_weekly_impressions: 33196800,
-    //        q4_weekly_num_posts: 28,
-    //        q4_weekly_reach: 15089455,
-    //        year: 2014,
-    //        year_growth: 10500000,
-    //        year_poe_per_post: 3000,
-    //        year_weekly_base_activated: "0.74",
-    //        year_weekly_eng_rate: "1.42",
-    //        year_weekly_impressions: 34524672,
-    //        year_weekly_num_posts: 28,
-    //        year_weekly_reach: 15693033
-    //    }
-    //];
+    var goalsCurrYear = 2015;
+    var year = 2015;
+    data.goalsObj = [
+        {
+            q1_growth: "5,234,000",
+            q1_poe_per_post: 120,
+            q1_weekly_base_activated: "0.30",
+            q1_weekly_eng_rate: "0.00",
+            q1_weekly_impressions: 0,
+            q1_weekly_num_posts: 0,
+            q1_weekly_reach: 0,
+            q2_growth: 0,
+            q2_poe_per_post: 33,
+            q2_weekly_base_activated: "0.00",
+            q2_weekly_eng_rate: "0.00",
+            q2_weekly_impressions: 0,
+            q2_weekly_num_posts: 0,
+            q2_weekly_reach: 0,
+            q3_growth: 0,
+            q3_poe_per_post: 0,
+            q3_weekly_base_activated: "0.00",
+            q3_weekly_eng_rate: "0.00",
+            q3_weekly_impressions: 0,
+            q3_weekly_num_posts: 0,
+            q3_weekly_reach: 0,
+            q4_growth: 0,
+            q4_poe_per_post: 0,
+            q4_weekly_base_activated: "0.00",
+            q4_weekly_eng_rate: "0.00",
+            q4_weekly_impressions: 0,
+            q4_weekly_num_posts: 0,
+            q4_weekly_reach: 0,
+            year: 2014,
+            year_growth: 0,
+            year_poe_per_post: 0,
+            year_weekly_base_activated: "0.00",
+            year_weekly_eng_rate: "0.00",
+            year_weekly_impressions: "97,863",
+            year_weekly_num_posts: 0,
+            year_weekly_reach: 0
+        }, {
+            q1_growth: "8,600,000",
+            q1_poe_per_post: "2,600",
+            q1_weekly_base_activated: "0.80",
+            q1_weekly_eng_rate: "1.37",
+            q1_weekly_impressions: "28,000,000",
+            q1_weekly_num_posts: 28,
+            q1_weekly_reach: "12,700,000",
+            q2_growth: "8,860,000",
+            q2_poe_per_post: "2,600",
+            q2_weekly_base_activated: "0.80",
+            q2_weekly_eng_rate: "1.33",
+            q2_weekly_impressions: "28,000,000",
+            q2_weekly_num_posts: 28,
+            q2_weekly_reach: "12,727,273",
+            q3_growth: "10,100,000",
+            q3_poe_per_post: "2,600",
+            q3_weekly_base_activated: "0.70",
+            q3_weekly_eng_rate: "1.18",
+            q3_weekly_impressions: "31,920,000",
+            q3_weekly_num_posts: 28,
+            q3_weekly_reach: "14,509,091",
+            q4_growth: "10,500,000",
+            q4_poe_per_post: "3,000",
+            q4_weekly_base_activated: "0.70",
+            q4_weekly_eng_rate: "1.42",
+            q4_weekly_impressions: "33,196,800",
+            q4_weekly_num_posts: 28,
+            q4_weekly_reach: "15,089,455",
+            year: 2015,
+            year_growth: "10,500,000",
+            year_poe_per_post: "3,000",
+            year_weekly_base_activated: "0.74",
+            year_weekly_eng_rate: "1.42",
+            year_weekly_impressions: "34,524,672",
+            year_weekly_num_posts: 28,
+            year_weekly_reach: "15,693,033"
+        },  {
+            q1_growth: "12,460",
+            q1_poe_per_post: 0,
+            q1_weekly_base_activated: "1.00",
+            q1_weekly_eng_rate: "0.00",
+            q1_weekly_impressions: 0,
+            q1_weekly_num_posts: "5,768",
+            q1_weekly_reach: 0,
+            q2_growth: 0,
+            q2_poe_per_post: 33,
+            q2_weekly_base_activated: "0.30",
+            q2_weekly_eng_rate: "0.00",
+            q2_weekly_impressions: 0,
+            q2_weekly_num_posts: 0,
+            q2_weekly_reach: "5,437",
+            q3_growth: 0,
+            q3_poe_per_post: 0,
+            q3_weekly_base_activated: "0.00",
+            q3_weekly_eng_rate: "0.00",
+            q3_weekly_impressions: 0,
+            q3_weekly_num_posts: "1,412",
+            q3_weekly_reach: 0,
+            q4_growth: 0,
+            q4_poe_per_post: 0,
+            q4_weekly_base_activated: "0.00",
+            q4_weekly_eng_rate: "10.00",
+            q4_weekly_impressions: 0,
+            q4_weekly_num_posts: 0,
+            q4_weekly_reach: 0,
+            year: 2016,
+            year_growth: 0,
+            year_poe_per_post: 0,
+            year_weekly_base_activated: "0.50",
+            year_weekly_eng_rate: "0.00",
+            year_weekly_impressions: "12,654",
+            year_weekly_num_posts: 0,
+            year_weekly_reach: 0
+        }, {
+            q1_growth: 0,
+            q1_poe_per_post: 0,
+            q1_weekly_base_activated: "0.00",
+            q1_weekly_eng_rate: "0.00",
+            q1_weekly_impressions: 0,
+            q1_weekly_num_posts: 0,
+            q1_weekly_reach: 0,
+            q2_growth: 0,
+            q2_poe_per_post: 33,
+            q2_weekly_base_activated: "0.00",
+            q2_weekly_eng_rate: "0.00",
+            q2_weekly_impressions: 0,
+            q2_weekly_num_posts: 12,
+            q2_weekly_reach: 0,
+            q3_growth: 0,
+            q3_poe_per_post: 0,
+            q3_weekly_base_activated: "0.00",
+            q3_weekly_eng_rate: "0.00",
+            q3_weekly_impressions: 0,
+            q3_weekly_num_posts: 0,
+            q3_weekly_reach: 0,
+            q4_growth: 0,
+            q4_poe_per_post: 0,
+            q4_weekly_base_activated: "0.00",
+            q4_weekly_eng_rate: "0.00",
+            q4_weekly_impressions: 0,
+            q4_weekly_num_posts: 0,
+            q4_weekly_reach: 0,
+            year: 2017,
+            year_growth: 0,
+            year_poe_per_post: 0,
+            year_weekly_base_activated: "0.00",
+            year_weekly_eng_rate: "0.00",
+            year_weekly_impressions: "45,733",
+            year_weekly_num_posts: 0,
+            year_weekly_reach: 0
+        }, {
+            q1_growth: 0,
+            q1_poe_per_post: 0,
+            q1_weekly_base_activated: "0.00",
+            q1_weekly_eng_rate: "0.00",
+            q1_weekly_impressions: 0,
+            q1_weekly_num_posts: 0,
+            q1_weekly_reach: 0,
+            q2_growth: 0,
+            q2_poe_per_post: 33,
+            q2_weekly_base_activated: "0.00",
+            q2_weekly_eng_rate: "0.00",
+            q2_weekly_impressions: 0,
+            q2_weekly_num_posts: 0,
+            q2_weekly_reach: 0,
+            q3_growth: 0,
+            q3_poe_per_post: 0,
+            q3_weekly_base_activated: "0.00",
+            q3_weekly_eng_rate: "0.00",
+            q3_weekly_impressions: 0,
+            q3_weekly_num_posts: 0,
+            q3_weekly_reach: 0,
+            q4_growth: 0,
+            q4_poe_per_post: 0,
+            q4_weekly_base_activated: "0.00",
+            q4_weekly_eng_rate: "0.00",
+            q4_weekly_impressions: 0,
+            q4_weekly_num_posts: 0,
+            q4_weekly_reach: 0,
+            year: 2018,
+            year_growth: 0,
+            year_poe_per_post: 0,
+            year_weekly_base_activated: "0.00",
+            year_weekly_eng_rate: "0.00",
+            year_weekly_impressions: "23,523",
+            year_weekly_num_posts: 0,
+            year_weekly_reach: 0
+        }
+    ];
+
+    function _getEndDateYear() {
+        d = new Date($("input[name=filterDate]").val().replace(/ /g, ''));
+        return d.getFullYear();
+    }
 
 
+    function updateGoalsCurrentTableValues() {
+        currYear = _getEndDateYear();
+        for (i = 0; i < data.goalsObj.length; i++) {
+            if (data.goalsObj[i].year == goalsCurrYear) {
+                for (var key in data.goalsObj[i]) {
+                    if (key != "year") {
+                        $('input[name="' + key + '"]').val(data.goalsObj[i][key]);
+                        $('input[name="' + key + '"]').attr('value',data.goalsObj[i][key]);
+                    }
+                    else {
+                        year = data.goalsObj[i][key];
+                    }
+
+                    //to save goals for current year for pie charts
+                    if (currYear == year) {
+                        goalsForEndDateYear = data.goalsObj[i];
+                    }
+                }
+            }
+        }
+
+        //$(".inputPercent").autoNumeric('update');
+        //$(".inputNumber").mask('000,000,000,00-0', {reverse: true});
+        //$(".inputNumber").mask('000,000,000,000', {reverse: true});
+    }
+
+    $(".goalArrContLeft").click(function() {
+        if (goalsCurrYear > data.goalsObj[0].year) {
+            $("#goalNextYear")[0].className = "";
+            goalsCurrYear--;
+            $("table.tableGoals").hide("slide", {direction: "right"}, 350);
+            $("#goalPrevYear").text(goalsCurrYear - 1);
+            $("#goalNextYear").text(goalsCurrYear + 1);
+            updateGoalsCurrentTableValues();
+            $(".goalsCurrYear").text(goalsCurrYear);
+            $("table.tableGoals").show("slide", {direction: "left"}, 350);
+        }
+        else {
+            $("#goalPrevYear")[0].className = "greyFont";
+        }
+    });
+
+    $(".goalArrContRight").click(function() {
+        if (goalsCurrYear < data.goalsObj[data.goalsObj.length - 1].year) {
+            $("#goalPrevYear")[0].className = "";
+            goalsCurrYear++;
+            $("table.tableGoals").hide("slide", {direction: "left"}, 350);
+            $("#goalNextYear").text(goalsCurrYear + 1);
+            $("#goalPrevYear").text(goalsCurrYear - 1);
+            updateGoalsCurrentTableValues();
+            $(".goalsCurrYear").text(goalsCurrYear);
+            $("table.tableGoals").show("slide", {direction: "right"}, 350);
+        }
+        else {
+            $("#goalNextYear")[0].className = "greyFont";
+        }
+    });
+    updateGoalsCurrentTableValues();
 });
 
 
