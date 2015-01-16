@@ -2077,6 +2077,9 @@ $(document).ready(function () {
 
     }
 
+    $(".inputPercent").autoNumeric('init');
+    $(".inputNumber").mask('000,000,000,000', {reverse: true});
+
     //Sample data for goals
     var goalsCurrYear = 2015;
     var year = 2015;
@@ -2296,9 +2299,9 @@ $(document).ready(function () {
             }
         }
 
-        //$(".inputPercent").autoNumeric('update');
-        //$(".inputNumber").mask('000,000,000,00-0', {reverse: true});
-        //$(".inputNumber").mask('000,000,000,000', {reverse: true});
+        $(".inputPercent").autoNumeric('update');
+        $(".inputNumber").mask('000,000,000,00-0', {reverse: true});
+        $(".inputNumber").mask('000,000,000,000', {reverse: true});
     }
 
     $(".goalArrContLeft").click(function() {
