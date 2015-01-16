@@ -596,7 +596,8 @@ $(document).ready(function () {
             }
         ];
 
-        var socRefSeries = [{
+        var socRefSeries = [
+            {
             type: "column",
             field: "facebook",
             name: "Facebook",
@@ -693,44 +694,51 @@ $(document).ready(function () {
                 date: "Tue Jan 06 2015 00:00:00 GMT+0200 (FLE Standard Time)",
                 day: "Tues",
                 month: "January",
-                value: 4,
-                week: "1/6"
+                value: 0,
+                week: "1/6",
+                comments: "4"
             }, {
                 date: "Wed Jan 07 2015 00:00:00 GMT+0200 (FLE Standard Time)",
                 day: "Wed",
                 month: "January",
                 value: 0,
-                week: "1/7"
+                week: "1/7",
+                comments: "1"
             }, {
                 date: "Thu Jan 08 2015 00:00:00 GMT+0200 (FLE Standard Time)",
                 day: "Thurs",
                 month: "January",
-                value: 8,
-                week: "1/8"
+                value: 0,
+                week: "1/8",
+                comments: "8"
             }, {
                 date: "Fri Jan 09 2015 00:00:00 GMT+0200 (FLE Standard Time)",
                 day: "Fri",
                 month: "January",
                 value: 0,
-                week: "1/9"
+                week: "1/9",
+                comments: "0"
             }, {
                 date: "Sat Jan 10 2015 00:00:00 GMT+0200 (FLE Standard Time)",
                 day: "Sat",
                 month: "January",
                 value: 0,
-                week: "1/10"
+                week: "1/10",
+                comments: "5"
             }, {
                 date: "Sun Jan 11 2015 00:00:00 GMT+0200 (FLE Standard Time)",
                 day: "Sun",
                 month: "January",
-                value: 2,
-                week: "1/11"
+                value: 0,
+                week: "1/11",
+                comments: "2"
             }, {
                 date: "Mon Jan 12 2015 00:00:00 GMT+0200 (FLE Standard Time)",
                 day: "Mon",
                 month: "January",
                 value: 0,
-                week: "1/12"
+                week: "1/12",
+                comments: "10"
             }
         ];
 
@@ -1040,10 +1048,10 @@ $(document).ready(function () {
         var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
         var growthAxis;
         if (diffDays > 14) {
-            growthAxis = "week";
+            growthAxis = "day";
         }
         else {
-            growthAxis = "day";
+            growthAxis = "week";
         }
 
         function createNewGrowthChart() {
