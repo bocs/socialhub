@@ -1661,3 +1661,7 @@ input.filterLabels {
 .ui-multiselect-checkboxes label input[type="checkbox"] {
     margin-right: 8px !important;
 }
+.addPadTB {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

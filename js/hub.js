@@ -1158,7 +1158,6 @@ $(document).ready(function () {
 
 
         function createEngagementChart() {
-            //console.log(currentData.maxValEng);
             $("#engagementChart").height(300).kendoChart({
                 dataSource: {
                     data: data.barsEng,
@@ -1912,7 +1911,6 @@ $(document).ready(function () {
                 }
                 data.ch.totalRef = data.ch.totalRef.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 $("#totalRef").text(data.ch.totalRef);
-                console.log(data.ch.totalRef);
             }
             else {
                 socRefSeries[e.pointIndex].visible = false;
@@ -1923,7 +1921,6 @@ $(document).ready(function () {
                 }
                 data.ch.totalRef = data.ch.totalRef.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 $("#totalRef").text(data.ch.totalRef);
-                console.log(data.ch.totalRef);
             }
 
             createSocRefChart();
