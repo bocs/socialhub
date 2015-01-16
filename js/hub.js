@@ -688,6 +688,52 @@ $(document).ready(function () {
             axis: "quantity"
         }];
 
+        data.barsComments = [
+            {
+                date: "Tue Jan 06 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Tues",
+                month: "January",
+                value: 4,
+                week: "1/6"
+            }, {
+                date: "Wed Jan 07 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Wed",
+                month: "January",
+                value: 0,
+                week: "1/7"
+            }, {
+                date: "Thu Jan 08 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Thurs",
+                month: "January",
+                value: 8,
+                week: "1/8"
+            }, {
+                date: "Fri Jan 09 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Fri",
+                month: "January",
+                value: 0,
+                week: "1/9"
+            }, {
+                date: "Sat Jan 10 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Sat",
+                month: "January",
+                value: 0,
+                week: "1/10"
+            }, {
+                date: "Sun Jan 11 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Sun",
+                month: "January",
+                value: 2,
+                week: "1/11"
+            }, {
+                date: "Mon Jan 12 2015 00:00:00 GMT+0200 (FLE Standard Time)",
+                day: "Mon",
+                month: "January",
+                value: 0,
+                week: "1/12"
+            }
+        ];
+
         var changeStatusType = {
             'followersChartS': {'container': 'changeStatusPlus', 'name': 'New Followers'},
             'impressChartS': {'container': 'changeStatusPlusS', 'name': 'Impressions'},
@@ -751,7 +797,7 @@ $(document).ready(function () {
 
         var brandAVal = $("#brandAVal").kendoProgressBar({
             min: 0,
-            max: 400,
+            max: 300,
             type: "value",
             animation: {
                 duration: 400
@@ -760,7 +806,7 @@ $(document).ready(function () {
 
         var brandBVal = $("#brandBVal").kendoProgressBar({
             min: 0,
-            max: 400,
+            max: 300,
             type: "value",
             animation: {
                 duration: 400
@@ -769,7 +815,7 @@ $(document).ready(function () {
 
         var brandCVal = $("#brandCVal").kendoProgressBar({
             min: 0,
-            max: 400,
+            max: 300,
             type: "value",
             animation: {
                 duration: 400
@@ -778,7 +824,7 @@ $(document).ready(function () {
 
         var brandDVal = $("#brandDVal").kendoProgressBar({
             min: 0,
-            max: 400,
+            max: 300,
             type: "value",
             animation: {
                 duration: 400
@@ -787,7 +833,7 @@ $(document).ready(function () {
 
         var brandEVal = $("#brandEVal").kendoProgressBar({
             min: 0,
-            max: 400,
+            max: 300,
             type: "value",
             animation: {
                 duration: 400
@@ -1343,7 +1389,7 @@ $(document).ready(function () {
         function createCommentsChart() {
             $("#commentsChart").height(260).kendoChart({
                 dataSource: {
-                    data: currentData,
+                    data: data.barsComments,
                     pageSize: viewSize,
                     page: 0,
                     sort: {field: "date", dir: "day"}
@@ -1380,8 +1426,6 @@ $(document).ready(function () {
                 valueAxes: [
                     {
                         name: "quantity",
-                        min: 0,
-                        max: currentData.maxValComm,
                         color: "#b1b1b1",
                         majorGridLines: {
                             visible: false
@@ -1394,7 +1438,7 @@ $(document).ready(function () {
                     }
                 ],
                 categoryAxis: {
-                    field: "day",
+                    field: growthAxis,
                     color: "#b1b1b1",
                     line: {
                         visible: true,
@@ -1850,7 +1894,6 @@ $(document).ready(function () {
         $("#donGrowth svg text").attr("y", 134);
         $("#donActiv svg text").attr("y", 134);
         $("#donEng svg text").attr("y", 134);
-
         function onLegendRefClick(e) {
             if (data.socChannels[e.pointIndex].visible == false) {
                 socRefSeries[e.pointIndex].visible = true;
